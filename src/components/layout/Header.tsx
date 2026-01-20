@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import MobileMenu from './MobileMenu';
@@ -19,7 +18,6 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 모바일 메뉴가 열릴 때 body 스크롤 방지
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -41,14 +39,14 @@ export default function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo/onekit-logo.svg"
-                alt="원킷(OneKit) - AI통합자산관리서비스"
-                width={120}
-                height={40}
-                priority
-              />
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">O</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-gray-900 text-lg leading-tight">One Tool Plan</span>
+                <span className="text-xs text-gray-500 leading-tight">IT 자산관리 솔루션</span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -59,7 +57,7 @@ export default function Header() {
             {/* CTA Button - Desktop */}
             <div className="hidden lg:block">
               <Button href="/contact" variant="primary">
-                무료 상담 신청
+                무료 견적 받기
               </Button>
             </div>
 
