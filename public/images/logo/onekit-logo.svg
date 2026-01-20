@@ -1,0 +1,15 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon: 육각형 안에 "1" 모양 (OneKit의 One을 상징) -->
+  <g id="icon">
+    <!-- 육각형 배경 -->
+    <path d="M20 5L28.66 10V20L20 25L11.34 20V10L20 5Z" fill="#8039df" fill-opacity="0.1" stroke="#8039df" stroke-width="2"/>
+    <!-- "1" 형태의 라인 -->
+    <path d="M18 12L20 10V20M16 20H24" stroke="#8039df" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 텍스트: 원킷 -->
+  <g id="text">
+    <text x="35" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#8039df">원킷</text>
+    <text x="35" y="33" font-family="Arial, sans-serif" font-size="7" font-weight="normal" fill="#6b21a8">OneKit</text>
+  </g>
+</svg>

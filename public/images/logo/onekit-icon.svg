@@ -1,0 +1,11 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 아이콘만 (favicon용) -->
+  <g id="icon">
+    <!-- 육각형 배경 -->
+    <path d="M20 5L28.66 10V20L20 25L11.34 20V10L20 5Z" fill="#8039df" fill-opacity="0.2"/>
+    <path d="M20 5L28.66 10V20L20 25L11.34 20V10L20 5Z" stroke="#8039df" stroke-width="2.5"/>
+    <!-- "1" 형태의 라인 -->
+    <path d="M18 12L20 10V20" stroke="#8039df" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 20H24" stroke="#8039df" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

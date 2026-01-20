@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(powershell -Command \"Get-ChildItem -Path temp-project -Recurse | Move-Item -Destination . -Force\")",
+      "Bash(dir:*)",
+      "Bash(if exist temp-project rmdir /S /Q temp-project)",
+      "Bash(if exist nul del nul)",
+      "Bash(rm:*)",
+      "WebFetch(domain:docs.google.com)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)"
+    ]
+  }
+}
