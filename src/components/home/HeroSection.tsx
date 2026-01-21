@@ -38,15 +38,27 @@ export default function HeroSection() {
               </span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-              IT 디바이스<br />
-              <span className="text-yellow-300">구매·매각·렌탈</span> 한 번에
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+              <span className="text-yellow-300">매각·구매·렌탈·유지보수·자산실사</span><br />
+              어떤 서비스든 <strong className="text-white">원툴플랜</strong>에서<br />
+              시작만 하세요
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90">
-              리퍼비시로 30% 절감, 매각 시 15% 추가 수익<br />
-              <strong className="text-white">One Tool Plan</strong>이 해결합니다
-            </p>
+            <div className="space-y-3 text-base md:text-lg text-white/90">
+              <p>
+                <span className="text-yellow-300 font-semibold">무료로</span> IT 디바이스 운영·교체·매각까지 전체 흐름을 관리해드립니다
+              </p>
+              <p>
+                디바이스의 <span className="text-yellow-300 font-semibold">잔존가치를 최대로</span> 끌어올리고,<br className="hidden md:inline" />
+                <span className="text-yellow-300 font-semibold">최적의 매각 시점</span>을 확인할 수 있습니다
+              </p>
+              <p>
+                리퍼비시로 <span className="text-yellow-300 font-bold">30% 비용 절감</span> + 매각 시 <span className="text-yellow-300 font-bold">15% 추가 수익</span>
+              </p>
+              <p className="pt-2 text-xl md:text-2xl font-bold text-white">
+                <strong>One Tool Plan</strong>이 해결합니다
+              </p>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
