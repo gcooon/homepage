@@ -153,10 +153,14 @@ export default function CostCalculator() {
               <h3 className="text-xl font-bold mb-6">예상 연간 절감액</h3>
 
               <div className="space-y-4 mb-8">
-                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+                <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">🛒</span>
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                      </div>
                       <span>구매 비용 절감</span>
                     </div>
                     <motion.span
@@ -170,10 +174,14 @@ export default function CostCalculator() {
                   </div>
                 </div>
 
-                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+                <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">💰</span>
+                      <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-xl flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
                       <span>매각 추가 수익</span>
                     </div>
                     <motion.span
@@ -187,10 +195,14 @@ export default function CostCalculator() {
                   </div>
                 </div>
 
-                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+                <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">⏰</span>
+                      <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-teal-400 rounded-xl flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
                       <span>시간 비용 절감</span>
                     </div>
                     <motion.span
@@ -237,16 +249,30 @@ export default function CostCalculator() {
 
             {/* Trust Badges */}
             <div className="mt-6 grid grid-cols-3 gap-4">
-              {[
-                { icon: '🔒', text: '보안 인증' },
-                { icon: '📊', text: '100+ 고객사' },
-                { icon: '⭐', text: '만족도 98%' },
-              ].map((badge, i) => (
-                <div key={i} className="bg-gray-800 rounded-lg p-3 text-center">
-                  <span className="text-2xl block mb-1">{badge.icon}</span>
-                  <span className="text-gray-400 text-xs">{badge.text}</span>
+              <div className="bg-gray-800 rounded-xl p-4 text-center">
+                <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
                 </div>
-              ))}
+                <span className="text-gray-400 text-xs">보안 인증</span>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-4 text-center">
+                <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <span className="text-gray-400 text-xs">100+ 고객사</span>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-4 text-center">
+                <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+                <span className="text-gray-400 text-xs">만족도 98%</span>
+              </div>
             </div>
           </motion.div>
         </div>

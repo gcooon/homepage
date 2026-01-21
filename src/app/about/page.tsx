@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { ReactNode } from 'react';
 import Container from '@/components/common/Container';
 import Card from '@/components/common/Card';
 
@@ -20,24 +21,55 @@ const values = [
   {
     title: '신뢰',
     description: '6년 검증된 실물 역량',
-    icon: '🤝',
+    iconType: 'trust',
+    gradient: 'from-purple-500 to-indigo-600',
   },
   {
     title: '혁신',
     description: 'AI 기반 자동화',
-    icon: '💡',
+    iconType: 'innovation',
+    gradient: 'from-blue-500 to-cyan-600',
   },
   {
     title: '효율',
     description: '불필요한 비용 제로',
-    icon: '⚡',
+    iconType: 'efficiency',
+    gradient: 'from-orange-500 to-amber-600',
   },
   {
     title: '지속가능성',
     description: '재순환/재활용',
-    icon: '♻️',
+    iconType: 'sustainability',
+    gradient: 'from-green-500 to-teal-600',
   },
 ];
+
+// Value Icon Component
+const ValueIcon = ({ type, className = "w-8 h-8" }: { type: string; className?: string }) => {
+  const icons: Record<string, ReactNode> = {
+    trust: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    innovation: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    ),
+    efficiency: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    sustainability: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+    ),
+  };
+  return icons[type] || icons.trust;
+};
 
 export default function AboutPage() {
   return (
@@ -114,8 +146,10 @@ export default function AboutPage() {
           <h2 className="section-title text-center mb-12">핵심 가치</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
-              <Card key={value.title} className="text-center">
-                <div className="text-5xl mb-4">{value.icon}</div>
+              <Card key={value.title} className="text-center group hover:shadow-xl transition-all duration-300">
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${value.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <ValueIcon type={value.iconType} className="w-8 h-8 text-white" />
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </Card>

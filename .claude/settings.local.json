@@ -9,7 +9,9 @@
       "Bash(rm:*)",
       "WebFetch(domain:docs.google.com)",
       "Bash(npm install:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout:*)"
     ]
   }
 }
