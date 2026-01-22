@@ -41,10 +41,10 @@ export default function CostCalculator() {
   };
 
   return (
-    <section className="py-24 bg-gray-900" id="calculator">
+    <section className="py-12 lg:py-24 bg-gray-900" id="calculator">
       <Container>
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-6 lg:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -60,10 +60,10 @@ export default function CostCalculator() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
           {/* Input Section */}
           <motion.div
-            className="bg-gray-800 rounded-2xl p-8"
+            className="bg-gray-800 rounded-2xl p-4 lg:p-8"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -71,7 +71,7 @@ export default function CostCalculator() {
             <h3 className="text-xl font-bold text-white mb-6">기업 정보 입력</h3>
 
             {/* Asset Count */}
-            <div className="mb-8">
+            <div className="mb-4 lg:mb-8">
               <div className="flex justify-between items-center mb-3">
                 <label className="text-gray-300">보유 자산 수량</label>
                 <span className="text-brand-light font-bold text-xl">{assetCount}대</span>
@@ -92,7 +92,7 @@ export default function CostCalculator() {
             </div>
 
             {/* Average Asset Value */}
-            <div className="mb-8">
+            <div className="mb-4 lg:mb-8">
               <div className="flex justify-between items-center mb-3">
                 <label className="text-gray-300">평균 자산 가치</label>
                 <span className="text-brand-light font-bold text-xl">{formatCurrency(avgAssetValue)}</span>
@@ -113,7 +113,7 @@ export default function CostCalculator() {
             </div>
 
             {/* Management Hours */}
-            <div className="mb-8">
+            <div className="mb-4 lg:mb-8">
               <div className="flex justify-between items-center mb-3">
                 <label className="text-gray-300">월 자산관리 시간</label>
                 <span className="text-brand-light font-bold text-xl">{managementHours}시간</span>
@@ -133,7 +133,7 @@ export default function CostCalculator() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 rounded-lg p-4 text-sm text-gray-400">
+            <div className="hidden lg:block bg-gray-700/50 rounded-lg p-4 text-sm text-gray-400">
               <p>* 계산 기준</p>
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>리퍼비시 구매 시 30% 절감 (연간 20% 교체 가정)</li>
@@ -149,10 +149,10 @@ export default function CostCalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-4 lg:p-8 text-white">
               <h3 className="text-xl font-bold mb-6">예상 연간 절감액</h3>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-2 lg:space-y-4 mb-4 lg:mb-8">
                 <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
@@ -248,7 +248,7 @@ export default function CostCalculator() {
             </div>
 
             {/* Trust Badges */}
-            <div className="mt-6 grid grid-cols-3 gap-4">
+            <div className="mt-6 hidden lg:grid grid-cols-3 gap-4">
               <div className="bg-gray-800 rounded-xl p-4 text-center">
                 <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
