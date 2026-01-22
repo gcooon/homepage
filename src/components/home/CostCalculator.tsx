@@ -150,7 +150,23 @@ export default function CostCalculator() {
             viewport={{ once: true }}
           >
             <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-4 lg:p-8 text-white">
-              <h3 className="text-xl font-bold mb-6">예상 연간 절감액</h3>
+              <h3 className="text-xl font-bold mb-4 lg:mb-6">예상 연간 절감액</h3>
+
+              {/* 모바일: 총 절감액 상단 표시 */}
+              <div className="lg:hidden mb-4 pb-4 border-b border-white/20">
+                <div className="text-center">
+                  <p className="text-white/70 text-sm mb-1">총 예상 연간 절감액</p>
+                  <motion.div
+                    className="text-3xl font-bold text-yellow-300"
+                    key={`mobile-${savings.totalAnnual}`}
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: 'spring', stiffness: 200 }}
+                  >
+                    {formatCurrency(savings.totalAnnual)}
+                  </motion.div>
+                </div>
+              </div>
 
               <div className="space-y-2 lg:space-y-4 mb-4 lg:mb-8">
                 <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
@@ -217,12 +233,13 @@ export default function CostCalculator() {
                 </div>
               </div>
 
-              <div className="border-t border-white/20 pt-6">
+              {/* 데스크탑: 총 절감액 하단 표시 */}
+              <div className="hidden lg:block border-t border-white/20 pt-6">
                 <div className="text-center">
                   <p className="text-white/70 mb-2">총 예상 연간 절감액</p>
                   <motion.div
                     className="text-4xl md:text-5xl font-bold text-yellow-300"
-                    key={savings.totalAnnual}
+                    key={`desktop-${savings.totalAnnual}`}
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', stiffness: 200 }}

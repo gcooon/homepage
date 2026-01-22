@@ -34,7 +34,7 @@ export default function HeroSection() {
               transition={{ delay: 0.2 }}
             >
               <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-                B2B IT 자산관리 전문 솔루션
+                B2B IT 디바이스 통합 솔루션
               </span>
             </motion.div>
 
@@ -52,11 +52,12 @@ export default function HeroSection() {
               <p>
                 IT 디바이스 운영·교체·매각까지 전체 흐름을 <span className="text-yellow-300 font-bold">무료</span>로 관리해드립니다
               </p>
-              <p className="text-xl md:text-2xl font-bold">
-                최적의 매각시점을 확인하고 리퍼비시로 <span className="text-yellow-300">30% 비용 절감</span> + 매각 시 <span className="text-yellow-300">15% 추가 수익</span>
-              </p>
+              <div className="text-xl md:text-2xl font-bold space-y-1">
+                <p>✓ 리퍼비시로 <span className="text-yellow-300">30% 비용 절감</span></p>
+                <p>✓ 매각 시 <span className="text-yellow-300">15% 추가 수익</span></p>
+              </div>
               <p className="pt-2 text-xl md:text-2xl font-bold text-white">
-                <strong>One Tool Plan</strong>이 해결합니다
+                IT 디바이스 <strong>One Tool Plan</strong>이 해결합니다
               </p>
             </div>
 

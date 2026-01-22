@@ -11,7 +11,7 @@ interface AnimatedCounterProps {
 
 export default function AnimatedCounter({
   end,
-  duration = 2000,
+  duration = 3000,
   suffix = '',
   className = ''
 }: AnimatedCounterProps) {
@@ -33,7 +33,7 @@ export default function AnimatedCounter({
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.1,
       }
     );
 
