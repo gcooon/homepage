@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useRef, useCallback } from 'react';
 import { NAV_ITEMS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import Button from '../common/Button';
@@ -14,6 +15,30 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    const swipeDistance = touchEndX.current - touchStartX.current;
+    const minSwipeDistance = 50;
+
+    // Swipe right to close (menu is on the right side)
+    if (swipeDistance > minSwipeDistance) {
+      onClose();
+    }
+
+    // Reset values
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  }, [onClose]);
 
   return (
     <>
@@ -29,9 +54,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Menu Panel */}
       <div
         className={cn(
-          "fixed top-0 right-0 bottom-0 w-80 bg-white z-50 lg:hidden transform transition-transform duration-300 shadow-xl",
+          "fixed top-0 right-0 bottom-0 w-80 bg-white z-50 lg:hidden transform transition-transform duration-300 shadow-xl touch-pan-y",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
