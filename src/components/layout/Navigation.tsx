@@ -106,7 +106,7 @@ export default function Navigation({ isMobile = false }: NavigationProps) {
         <nav className="flex justify-center gap-x-4">
           {firstRowItems.map(renderLink)}
         </nav>
-        <nav className="flex justify-end gap-x-4">
+        <nav className="flex justify-center gap-x-4">
           {secondRowItems.map(renderLink)}
         </nav>
       </div>
