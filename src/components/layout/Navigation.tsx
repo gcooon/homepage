@@ -80,42 +80,29 @@ export default function Navigation({ isMobile = false }: NavigationProps) {
     return pathname === href;
   };
 
-  const firstRowItems = NAV_ITEMS.slice(0, 3);
-  const secondRowItems = NAV_ITEMS.slice(3);
-
-  const renderLink = (item: typeof NAV_ITEMS[number]) => (
-    <Link
-      key={item.href}
-      href={item.href}
-      onClick={(e) => handleClick(e, item.href)}
-      className={cn(
-        "transition-colors hover:text-brand-primary relative whitespace-nowrap",
-        isMobile ? "text-sm font-semibold" : "text-base font-bold",
-        isActive(item.href)
-          ? "text-brand-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand-primary"
-          : "text-gray-800"
-      )}
-    >
-      {item.label}
-    </Link>
-  );
-
-  if (isMobile) {
-    return (
-      <div className="flex flex-col gap-2">
-        <nav className="flex justify-center gap-x-4">
-          {firstRowItems.map(renderLink)}
-        </nav>
-        <nav className="flex justify-center gap-x-4">
-          {secondRowItems.map(renderLink)}
-        </nav>
-      </div>
-    );
-  }
-
   return (
-    <nav className="flex items-center space-x-8">
-      {NAV_ITEMS.map(renderLink)}
+    <nav className={cn(
+      "flex",
+      isMobile
+        ? "flex-wrap justify-center gap-x-4 gap-y-2"
+        : "items-center space-x-8"
+    )}>
+      {NAV_ITEMS.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          onClick={(e) => handleClick(e, item.href)}
+          className={cn(
+            "transition-colors hover:text-brand-primary relative whitespace-nowrap",
+            isMobile ? "text-sm font-semibold" : "text-base font-bold",
+            isActive(item.href)
+              ? "text-brand-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand-primary"
+              : "text-gray-800"
+          )}
+        >
+          {item.label}
+        </Link>
+      ))}
     </nav>
   );
 }
