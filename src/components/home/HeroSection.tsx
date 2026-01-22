@@ -44,7 +44,7 @@ export default function HeroSection() {
               </p>
               <h1 className="font-bold leading-tight text-white">
                 <span className="text-2xl md:text-3xl lg:text-4xl">IT 디바이스의 모든 서비스</span><br />
-                <span className="text-3xl md:text-4xl lg:text-5xl"><strong className="text-white">원툴플랜</strong>이 해결합니다</span>
+                <span className="text-3xl md:text-4xl lg:text-5xl"><strong className="text-brand-light">원툴플랜</strong>이 제공합니다</span>
               </h1>
             </div>
 
