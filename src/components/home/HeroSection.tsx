@@ -182,7 +182,7 @@ export default function HeroSection() {
 
                   {/* Brand Partners */}
                   <div className="space-y-2">
-                    <div className="text-white/60 text-xs">공식 파트너</div>
+                    <div className="text-white/60 text-xs">서비스 브랜드</div>
                     <div className="flex justify-between items-center bg-white/5 rounded-lg px-4 py-3">
                       {['Samsung', 'LG', 'HP', 'Dell', 'Apple'].map((brand, i) => (
                         <motion.span
@@ -207,7 +207,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.5, type: 'spring' }}
               >
-                5개 파트너사 비교견적
+                3개 파트너사 비교견적
               </motion.div>
             </div>
           </motion.div>
