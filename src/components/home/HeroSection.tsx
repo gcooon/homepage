@@ -10,7 +10,7 @@ export default function HeroSection() {
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #8039df 0%, #6b21a8 100%)'
+        background: 'linear-gradient(135deg, #0A1628 0%, #0F2847 100%)'
       }}
     >
       {/* Background Pattern */}
@@ -33,32 +33,29 @@ export default function HeroSection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+              <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium" style={{ color: '#00D9FF' }}>
                 B2B IT 디바이스 통합 솔루션
               </span>
             </motion.div>
 
-            <div className="space-y-2">
-              <p className="text-2xl md:text-3xl font-bold text-yellow-300">
+            <div className="space-y-4">
+              <p className="text-2xl md:text-3xl font-bold" style={{ color: '#00D9FF' }}>
                 매각·구매·렌탈·유지보수·자산실사
               </p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
-                어떤 서비스든 <strong className="text-white">원툴플랜</strong>에서<br />
-                시작만 하세요
+              <h1 className="font-bold leading-tight text-white">
+                <span className="text-2xl md:text-3xl lg:text-4xl">IT 디바이스의 모든 서비스</span><br />
+                <span className="text-3xl md:text-4xl lg:text-5xl"><strong className="text-white">원툴플랜</strong>이 해결합니다</span>
               </h1>
             </div>
 
-            <div className="space-y-3 text-base md:text-lg text-white/90">
-              <p>
-                IT 디바이스 운영·교체·매각까지 전체 흐름을 <span className="text-yellow-300 font-bold">무료</span>로 관리해드립니다
+            <div className="space-y-3 text-white/90">
+              <p className="text-xl md:text-2xl font-semibold">
+                운영·교체·매각 전체 흐름을 <span className="font-bold text-2xl md:text-3xl" style={{ color: '#00D9FF' }}>무료</span>로 관리해드려요
               </p>
               <div className="text-xl md:text-2xl font-bold space-y-1">
-                <p>✓ 리퍼비시로 <span className="text-yellow-300">30% 비용 절감</span></p>
-                <p>✓ 매각 시 <span className="text-yellow-300">15% 추가 수익</span></p>
+                <p>✓ 리퍼비시로 <span style={{ color: '#FF6B35' }}>30% 비용 절감</span></p>
+                <p>✓ 매각 시 <span style={{ color: '#FF6B35' }}>15% 추가 수익</span></p>
               </div>
-              <p className="pt-2 text-xl md:text-2xl font-bold text-white">
-                IT 디바이스 <strong>One Tool Plan</strong>이 해결합니다
-              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -66,7 +63,8 @@ export default function HeroSection() {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                className="bg-white text-brand-primary hover:bg-yellow-300 hover:text-brand-secondary font-bold shadow-xl"
+                className="font-bold shadow-xl hover:opacity-90"
+                style={{ backgroundColor: '#00D9FF', color: '#0A1628' }}
               >
                 무료견적문의
               </Button>
@@ -90,7 +88,8 @@ export default function HeroSection() {
                 <AnimatedCounter
                   end={30}
                   suffix="%"
-                  className="text-3xl md:text-4xl font-bold text-white"
+                  className="text-3xl md:text-4xl font-bold"
+                  style={{ color: '#FF6B35' }}
                 />
                 <div className="text-sm text-white/80 mt-1">비용 절감</div>
               </div>
@@ -98,7 +97,8 @@ export default function HeroSection() {
                 <AnimatedCounter
                   end={70}
                   suffix="%"
-                  className="text-3xl md:text-4xl font-bold text-white"
+                  className="text-3xl md:text-4xl font-bold"
+                  style={{ color: '#FF6B35' }}
                 />
                 <div className="text-sm text-white/80 mt-1">관리시간 단축</div>
               </div>
