@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import MobileMenu from './MobileMenu';
-import Button from '../common/Button';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +36,7 @@ export default function Header() {
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
@@ -49,21 +48,14 @@ export default function Header() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:block">
+            {/* Desktop Navigation - Centered */}
+            <div className="hidden lg:flex flex-1 justify-center">
               <Navigation />
-            </div>
-
-            {/* CTA Button - Desktop */}
-            <div className="hidden lg:block">
-              <Button href="/contact" variant="primary">
-                무료 견적 받기
-              </Button>
             </div>
 
             {/* Mobile Menu Toggle */}
             <button
-              className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="lg:hidden ml-auto p-2 hover:bg-gray-100 rounded-lg transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
               aria-label="메뉴 열기"
             >

@@ -15,10 +15,10 @@ export default function Navigation() {
           key={item.href}
           href={item.href}
           className={cn(
-            "text-sm font-medium transition-colors hover:text-brand-primary relative",
+            "text-base font-bold transition-colors hover:text-brand-primary relative",
             pathname === item.href
               ? "text-brand-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand-primary"
-              : "text-gray-700"
+              : "text-gray-800"
           )}
         >
           {item.label}

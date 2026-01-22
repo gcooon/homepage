@@ -51,7 +51,7 @@ export default function CTASection() {
                 size="xl"
                 className="bg-white text-brand-primary hover:bg-yellow-300 hover:text-brand-secondary font-bold shadow-xl"
               >
-                무료 견적 받기
+                무료견적문의
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

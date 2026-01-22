@@ -34,10 +34,10 @@ const ProblemIcon = ({ type }: { type: string }) => {
 };
 
 const problems = [
-  { iconType: 'chart', text: '구매 따로', color: 'from-red-400 to-red-500' },
-  { iconType: 'wrench', text: '수리 따로', color: 'from-red-400 to-red-500' },
-  { iconType: 'currency', text: '매각 따로', color: 'from-red-400 to-red-500' },
-  { iconType: 'clipboard', text: '실사 따로', color: 'from-red-400 to-red-500' },
+  { iconType: 'chart', text: '구매 따로', color: 'from-slate-500 to-slate-600' },
+  { iconType: 'currency', text: '매각 따로', color: 'from-slate-400 to-slate-500' },
+  { iconType: 'clipboard', text: '렌탈 따로', color: 'from-gray-500 to-gray-600' },
+  { iconType: 'wrench', text: '유지보수 따로', color: 'from-gray-400 to-gray-500' },
 ];
 
 export default function ProblemSolutionSection() {
@@ -64,33 +64,42 @@ export default function ProblemSolutionSection() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Problem Side */}
           <motion.div
-            className="relative"
+            className="relative h-full"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-red-100">
+            <div className="bg-slate-100 rounded-2xl p-8 shadow-lg border border-slate-300 h-full">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-red-600">Problem</h3>
+                  <h3 className="text-xl font-bold text-slate-700">Problem</h3>
                   <p className="text-gray-500 text-sm">현재 상황</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-red-50 rounded-xl p-4 border-l-4 border-red-400 mb-6">
+                <p className="text-red-800 text-lg font-semibold">
+                  여러 업체, 복잡한 프로세스, 높은 비용
+                </p>
+                <p className="text-red-700 text-base mt-1">
+                  = 시간과 비용 낭비의 악순환
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
                 {problems.map((problem, index) => (
                   <motion.div
                     key={index}
-                    className="bg-red-50/80 backdrop-blur-sm rounded-xl p-4 text-center border border-red-100 hover:shadow-md transition-all duration-300"
+                    className="bg-white/80 backdrop-blur-sm rounded-xl p-4 text-center border border-slate-200 hover:shadow-md transition-all duration-300"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -102,15 +111,6 @@ export default function ProblemSolutionSection() {
                     <span className="text-gray-700 font-medium">{problem.text}</span>
                   </motion.div>
                 ))}
-              </div>
-
-              <div className="bg-red-50 rounded-xl p-4 border-l-4 border-red-400">
-                <p className="text-red-700 font-medium">
-                  여러 업체, 복잡한 프로세스, 높은 비용
-                </p>
-                <p className="text-red-600 text-sm mt-1">
-                  = 시간과 비용 낭비의 악순환
-                </p>
               </div>
             </div>
 
@@ -130,12 +130,13 @@ export default function ProblemSolutionSection() {
 
           {/* Solution Side */}
           <motion.div
+            className="h-full"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-8 shadow-xl text-white relative overflow-hidden">
+            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-8 shadow-xl text-white relative overflow-hidden h-full">
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-white rounded-full blur-2xl" />
@@ -155,7 +156,7 @@ export default function ProblemSolutionSection() {
                   </div>
                 </div>
 
-                <div className="bg-white/10 rounded-xl p-6 mb-6 backdrop-blur-sm border border-white/10">
+                <div className="bg-white/10 rounded-xl p-6 mb-4 backdrop-blur-sm border border-white/10">
                   <div className="text-center">
                     <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-teal-400 rounded-2xl flex items-center justify-center shadow-lg">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,6 +167,20 @@ export default function ProblemSolutionSection() {
                     <p className="text-white/80">
                       구매부터 매각까지, 하나의 플랫폼에서 해결
                     </p>
+                  </div>
+                </div>
+
+                <div className="bg-yellow-400/20 rounded-xl p-4 mb-4 backdrop-blur-sm border border-yellow-400/30">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    </div>
+                    <div className="text-white font-semibold text-lg">
+                      <p><span className="text-yellow-300">최고가 매각</span>을 위한 <span className="text-yellow-300">최적시점</span></p>
+                      <p className="mt-1"><span className="text-yellow-300">최저가 구매</span>를 위한 <span className="text-yellow-300">자동 견적</span> 제안</p>
+                    </div>
                   </div>
                 </div>
 

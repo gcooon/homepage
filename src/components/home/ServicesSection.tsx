@@ -172,7 +172,7 @@ function ServiceCard({ service, index, expandedIds, toggleExpanded }: {
                       window.location.href = '/contact';
                     }}
                   >
-                    {service.isFree ? '서비스 문의하기' : '무료 견적 받기'}
+                    {service.isFree ? '서비스 문의하기' : '무료견적문의'}
                   </motion.button>
                 </div>
               </motion.div>

@@ -17,5 +17,5 @@ export const NAV_ITEMS = [
   { label: "서비스", href: "/#services" },
   { label: "비용 계산", href: "/#calculator" },
   { label: "회사 소개", href: "/about" },
-  { label: "문의하기", href: "/contact" },
+  { label: "무료견적문의", href: "/contact" },
 ] as const;
