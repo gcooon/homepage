@@ -2,10 +2,12 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Navigation from './Navigation';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,13 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <header
@@ -25,7 +34,7 @@ export default function Header() {
         {/* Mobile Header */}
         <div className="flex lg:hidden items-center py-3 gap-3">
           {/* Logo - Icon only on mobile */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" onClick={handleLogoClick} className="flex-shrink-0">
             <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">O</span>
             </div>
@@ -40,7 +49,7 @@ export default function Header() {
         {/* Desktop Header */}
         <div className="hidden lg:flex items-center h-20">
           {/* Logo - Full on desktop */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">O</span>
             </div>
