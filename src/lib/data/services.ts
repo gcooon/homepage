@@ -26,7 +26,7 @@ export const services: Service[] = [
     subtitle: '최고가 & 보안 파기',
     description: '데이터 보안과 최고가 매각을 동시에 실현합니다.',
     icon: 'currency',
-    background: 'from-purple-600 to-indigo-700',
+    background: 'from-violet-600 to-purple-700',
     marketContext: '기업들은 중고 자산 처분 시 "데이터 유출"과 "헐값 매각"을 가장 우려합니다.',
     features: [
       {
@@ -54,7 +54,7 @@ export const services: Service[] = [
     subtitle: '예산 절감 최적화',
     description: '신품급 리퍼비시로 최대 50% 비용을 절감하세요.',
     icon: 'cart',
-    background: 'from-blue-600 to-cyan-600',
+    background: 'from-indigo-500 to-violet-600',
     marketContext: '2025년 기업 IT 예산 축소로 "신품급 중고(Refurbished)" 수요가 폭증하고 있습니다.',
     features: [
       {
@@ -82,7 +82,7 @@ export const services: Service[] = [
     subtitle: '유연한 운영',
     description: '초기 투자비 0원, 월 구독료로 IT 자산을 운영하세요.',
     icon: 'refresh',
-    background: 'from-green-600 to-teal-600',
+    background: 'from-purple-500 to-indigo-600',
     marketContext: '소유에서 "구독/렌탈"로 전환하는 OpEx 선호 트렌드가 확산되고 있습니다.',
     features: [
       {
@@ -110,7 +110,7 @@ export const services: Service[] = [
     subtitle: '업무 연속성 보장',
     description: '전담 엔지니어가 자산의 안정적 운영을 책임집니다.',
     icon: 'wrench',
-    background: 'from-orange-500 to-amber-600',
+    background: 'from-violet-500 to-purple-600',
     marketContext: 'IT 인력이 부족한 중소/중견기업은 자산 관리자가 없어 고장 대응이 느립니다.',
     features: [
       {
@@ -138,7 +138,7 @@ export const services: Service[] = [
     subtitle: '데이터 가시성',
     description: 'QR/바코드 기반 전수 조사로 99.9% 정확도를 실현합니다.',
     icon: 'clipboard',
-    background: 'from-pink-600 to-rose-600',
+    background: 'from-indigo-600 to-purple-700',
     marketContext: '엑셀 수기 관리의 부정확성으로 분실율 평균 5~10%가 발생하고 있습니다.',
     features: [
       {
