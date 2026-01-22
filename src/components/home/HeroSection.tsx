@@ -63,8 +63,7 @@ export default function HeroSection() {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                className="font-bold shadow-xl hover:opacity-90"
-                style={{ backgroundColor: '#00D9FF', color: '#0A1628' }}
+                className="font-bold shadow-xl hover:opacity-90 bg-[#00D9FF] text-[#0A1628]"
               >
                 무료견적문의
               </Button>
@@ -88,8 +87,7 @@ export default function HeroSection() {
                 <AnimatedCounter
                   end={30}
                   suffix="%"
-                  className="text-3xl md:text-4xl font-bold"
-                  style={{ color: '#FF6B35' }}
+                  className="text-3xl md:text-4xl font-bold text-[#FF6B35]"
                 />
                 <div className="text-sm text-white/80 mt-1">비용 절감</div>
               </div>
@@ -97,8 +95,7 @@ export default function HeroSection() {
                 <AnimatedCounter
                   end={70}
                   suffix="%"
-                  className="text-3xl md:text-4xl font-bold"
-                  style={{ color: '#FF6B35' }}
+                  className="text-3xl md:text-4xl font-bold text-[#FF6B35]"
                 />
                 <div className="text-sm text-white/80 mt-1">관리시간 단축</div>
               </div>
