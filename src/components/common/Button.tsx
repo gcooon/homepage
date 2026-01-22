@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
@@ -21,7 +23,7 @@ export default function Button({
   className = '',
   type = 'button',
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200';
+  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 cursor-pointer';
 
   const variantStyles = {
     primary: 'bg-brand-primary hover:bg-brand-secondary text-white shadow-md hover:shadow-lg',
@@ -37,6 +39,24 @@ export default function Button({
   };
 
   const classes = cn(baseStyles, variantStyles[variant], sizeStyles[size], className);
+
+  // Handle anchor links with smooth scroll
+  if (href?.startsWith('#')) {
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    return (
+      <a href={href} onClick={handleClick} className={classes}>
+        {children}
+      </a>
+    );
+  }
 
   if (href) {
     return (

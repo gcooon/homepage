@@ -33,10 +33,10 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Header */}
         <div className="flex lg:hidden items-center py-3 gap-3">
-          {/* Logo - Icon only on mobile */}
+          {/* Logo with One Tool Plan text inside on mobile */}
           <Link href="/" onClick={handleLogoClick} className="flex-shrink-0">
-            <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">O</span>
+            <div className="h-10 px-3 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">One Tool Plan</span>
             </div>
           </Link>
 
