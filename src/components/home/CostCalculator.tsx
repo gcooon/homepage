@@ -60,21 +60,21 @@ export default function CostCalculator() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-stretch">
           {/* Input Section */}
           <motion.div
-            className="bg-gray-800 rounded-2xl p-4 lg:p-8"
+            className="bg-gray-800 rounded-2xl p-4 lg:p-6 flex flex-col"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold text-white mb-6">기업 정보 입력</h3>
+            <h3 className="text-xl font-bold text-white mb-4">기업 정보 입력</h3>
 
             {/* Asset Count */}
-            <div className="mb-4 lg:mb-8">
-              <div className="flex justify-between items-center mb-3">
-                <label className="text-gray-300">보유 자산 수량</label>
-                <span className="text-brand-light font-bold text-xl">{assetCount}대</span>
+            <div className="mb-3 lg:mb-5">
+              <div className="flex justify-between items-center mb-2">
+                <label className="text-gray-300 text-sm">보유 자산 수량</label>
+                <span className="text-brand-light font-bold text-lg">{assetCount}대</span>
               </div>
               <input
                 type="range"
@@ -92,10 +92,10 @@ export default function CostCalculator() {
             </div>
 
             {/* Average Asset Value */}
-            <div className="mb-4 lg:mb-8">
-              <div className="flex justify-between items-center mb-3">
-                <label className="text-gray-300">평균 자산 가치</label>
-                <span className="text-brand-light font-bold text-xl">{formatCurrency(avgAssetValue)}</span>
+            <div className="mb-3 lg:mb-5">
+              <div className="flex justify-between items-center mb-2">
+                <label className="text-gray-300 text-sm">평균 자산 가치</label>
+                <span className="text-brand-light font-bold text-lg">{formatCurrency(avgAssetValue)}</span>
               </div>
               <input
                 type="range"
@@ -113,10 +113,10 @@ export default function CostCalculator() {
             </div>
 
             {/* Management Hours */}
-            <div className="mb-4 lg:mb-8">
-              <div className="flex justify-between items-center mb-3">
-                <label className="text-gray-300">월 자산관리 시간</label>
-                <span className="text-brand-light font-bold text-xl">{managementHours}시간</span>
+            <div className="mb-3 lg:mb-5">
+              <div className="flex justify-between items-center mb-2">
+                <label className="text-gray-300 text-sm">월 자산관리 시간</label>
+                <span className="text-brand-light font-bold text-lg">{managementHours}시간</span>
               </div>
               <input
                 type="range"
@@ -133,9 +133,9 @@ export default function CostCalculator() {
               </div>
             </div>
 
-            <div className="hidden lg:block bg-gray-700/50 rounded-lg p-4 text-sm text-gray-400">
+            <div className="hidden lg:block bg-gray-700/50 rounded-lg p-3 text-sm text-gray-400 mt-auto">
               <p>* 계산 기준</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
+              <ul className="list-disc list-inside mt-1 space-y-0.5 text-xs">
                 <li>리퍼비시 구매 시 30% 절감 (연간 20% 교체 가정)</li>
                 <li>매각 시 15% 추가 수익 (연간 10% 매각 가정)</li>
                 <li>관리시간 70% 단축 (시급 5만원 기준)</li>
@@ -145,12 +145,13 @@ export default function CostCalculator() {
 
           {/* Results Section */}
           <motion.div
+            className="h-full"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-4 lg:p-8 text-white">
-              <h3 className="text-xl font-bold mb-4 lg:mb-6">예상 연간 절감액</h3>
+            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-4 lg:p-6 text-white h-full flex flex-col">
+              <h3 className="text-xl font-bold mb-4">예상 연간 절감액</h3>
 
               {/* 모바일: 총 절감액 상단 표시 */}
               <div className="lg:hidden mb-4 pb-4 border-b border-white/20">
@@ -168,7 +169,7 @@ export default function CostCalculator() {
                 </div>
               </div>
 
-              <div className="space-y-2 lg:space-y-4 mb-4 lg:mb-8">
+              <div className="space-y-2 lg:space-y-3 mb-4 lg:mb-4">
                 <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
@@ -234,11 +235,11 @@ export default function CostCalculator() {
               </div>
 
               {/* 데스크탑: 총 절감액 하단 표시 */}
-              <div className="hidden lg:block border-t border-white/20 pt-6">
+              <div className="hidden lg:block border-t border-white/20 pt-4">
                 <div className="text-center">
-                  <p className="text-white/70 mb-2">총 예상 연간 절감액</p>
+                  <p className="text-white/70 text-sm mb-1">총 예상 연간 절감액</p>
                   <motion.div
-                    className="text-4xl md:text-5xl font-bold text-yellow-300"
+                    className="text-3xl md:text-4xl font-bold text-yellow-300"
                     key={`desktop-${savings.totalAnnual}`}
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
@@ -249,7 +250,7 @@ export default function CostCalculator() {
                 </div>
               </div>
 
-              <div className="mt-8 space-y-3">
+              <div className="mt-auto pt-4 space-y-2">
                 <Button
                   href="/contact"
                   variant="primary"
@@ -263,7 +264,6 @@ export default function CostCalculator() {
                 </p>
               </div>
             </div>
-
           </motion.div>
         </div>
       </Container>
