@@ -64,16 +64,16 @@ function SliderInput({ label, value, onChange, min, max, step, suffix = '', form
 
   return (
     <div className="mb-4">
-      <div className="flex justify-between items-center mb-2">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2 mb-2">
         <label className="text-gray-300 text-sm">{label}</label>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <input
             type="text"
             value={value.toLocaleString()}
             onChange={handleInputChange}
-            className="w-24 bg-gray-700 text-brand-light text-right px-2 py-1 rounded text-sm font-bold border border-gray-600 focus:border-brand-light focus:outline-none"
+            className="w-20 sm:w-24 bg-gray-700 text-brand-light text-right px-2 py-1 rounded text-sm font-bold border border-gray-600 focus:border-brand-light focus:outline-none"
           />
-          <span className="text-brand-light font-bold text-sm w-8">{suffix}</span>
+          <span className="text-brand-light font-bold text-sm min-w-6">{suffix}</span>
         </div>
       </div>
       <input
@@ -115,9 +115,9 @@ function ResultCard({ icon, title, amount, tooltip, color }: ResultCardProps) {
   };
 
   return (
-    <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10 relative">
-      <div className="flex items-start justify-between mb-2">
-        <div className={`w-10 h-10 ${color} rounded-xl flex items-center justify-center text-white`}>
+    <div className="bg-white/10 rounded-xl p-2 sm:p-4 backdrop-blur-sm border border-white/10 relative">
+      <div className="flex items-start justify-between mb-1 sm:mb-2">
+        <div className={`w-8 h-8 sm:w-10 sm:h-10 ${color} rounded-lg sm:rounded-xl flex items-center justify-center text-white`}>
           {icon}
         </div>
         <button
@@ -129,9 +129,9 @@ function ResultCard({ icon, title, amount, tooltip, color }: ResultCardProps) {
           <InfoIcon />
         </button>
       </div>
-      <div className="text-white/70 text-xs mb-1">{title}</div>
+      <div className="text-white/70 text-[10px] sm:text-xs mb-1 truncate">{title}</div>
       <motion.div
-        className="text-xl font-bold text-white"
+        className="text-base sm:text-xl font-bold text-white"
         key={amount}
         initial={{ scale: 1.1, color: '#fde047' }}
         animate={{ scale: 1, color: '#ffffff' }}
@@ -178,9 +178,9 @@ function ComparisonBar({ label, currentValue, newValue, maxValue }: ComparisonBa
     <div className="mb-3">
       <div className="text-white/70 text-xs mb-1">{label}</div>
       <div className="space-y-1">
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-gray-400 w-12">현재</span>
-          <div className="flex-1 bg-gray-700 rounded-full h-4 overflow-hidden">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <span className="text-xs text-gray-400 w-8 sm:w-10 shrink-0">현재</span>
+          <div className="flex-1 bg-gray-700 rounded-full h-3 sm:h-4 overflow-hidden min-w-0">
             <motion.div
               className="bg-red-400 h-full rounded-full"
               initial={{ width: 0 }}
@@ -188,11 +188,11 @@ function ComparisonBar({ label, currentValue, newValue, maxValue }: ComparisonBa
               transition={{ duration: 0.5 }}
             />
           </div>
-          <span className="text-xs text-white w-16 text-right">{formatCurrency(currentValue)}원</span>
+          <span className="text-xs text-white w-12 sm:w-14 text-right shrink-0">{formatCurrency(currentValue)}원</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-brand-light w-12">OTP</span>
-          <div className="flex-1 bg-gray-700 rounded-full h-4 overflow-hidden">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <span className="text-xs text-brand-light w-8 sm:w-10 shrink-0">OTP</span>
+          <div className="flex-1 bg-gray-700 rounded-full h-3 sm:h-4 overflow-hidden min-w-0">
             <motion.div
               className="bg-green-400 h-full rounded-full"
               initial={{ width: 0 }}
@@ -200,7 +200,7 @@ function ComparisonBar({ label, currentValue, newValue, maxValue }: ComparisonBa
               transition={{ duration: 0.5, delay: 0.2 }}
             />
           </div>
-          <span className="text-xs text-white w-16 text-right">{formatCurrency(newValue)}원</span>
+          <span className="text-xs text-white w-12 sm:w-14 text-right shrink-0">{formatCurrency(newValue)}원</span>
         </div>
       </div>
     </div>
@@ -463,12 +463,12 @@ export default function CostCalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-5 lg:p-6 text-white h-full flex flex-col">
+            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-3 sm:p-5 lg:p-6 text-white h-full flex flex-col">
               {/* 총 절감액 */}
               <div className="text-center mb-6 pb-4 border-b border-white/20">
                 <p className="text-white/70 text-sm mb-1">예상 연간 총 절감액</p>
                 <motion.div
-                  className="text-4xl lg:text-5xl font-bold text-yellow-300"
+                  className="text-2xl sm:text-4xl lg:text-5xl font-bold text-yellow-300"
                   key={savings.totalAnnual}
                   initial={{ scale: 0.9 }}
                   animate={{ scale: 1 }}
@@ -479,19 +479,19 @@ export default function CostCalculator() {
               </div>
 
               {/* 추가 지표 */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                <div className="bg-white/10 rounded-lg p-3 text-center">
-                  <div className="text-white/60 text-xs mb-1">월간 절감액</div>
-                  <div className="text-lg font-bold">{formatCurrency(savings.totalAnnual / 12)}</div>
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div className="bg-white/10 rounded-lg p-2 sm:p-3 text-center">
+                  <div className="text-white/60 text-[10px] sm:text-xs mb-1">월간 절감액</div>
+                  <div className="text-sm sm:text-lg font-bold">{formatCurrency(savings.totalAnnual / 12)}</div>
                 </div>
-                <div className="bg-white/10 rounded-lg p-3 text-center">
-                  <div className="text-white/60 text-xs mb-1">3년 누적 효과</div>
-                  <div className="text-lg font-bold">{formatCurrency(savings.totalAnnual * 3)}</div>
+                <div className="bg-white/10 rounded-lg p-2 sm:p-3 text-center">
+                  <div className="text-white/60 text-[10px] sm:text-xs mb-1">3년 누적 효과</div>
+                  <div className="text-sm sm:text-lg font-bold">{formatCurrency(savings.totalAnnual * 3)}</div>
                 </div>
               </div>
 
               {/* 항목별 절감액 */}
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
                 <ResultCard
                   icon={<ShoppingCartIcon />}
                   title="구매 비용 절감"
@@ -530,7 +530,7 @@ export default function CostCalculator() {
               </div>
 
               {/* 비교 차트 */}
-              <div className="bg-white/5 rounded-xl p-4 mb-6">
+              <div className="bg-white/5 rounded-xl p-2 sm:p-4 mb-4 sm:mb-6">
                 <h4 className="text-sm font-bold mb-3">현재 vs One Tool Plan</h4>
                 <ComparisonBar
                   label="구매 비용"
@@ -555,24 +555,24 @@ export default function CostCalculator() {
               {/* 이메일 폼 */}
               <div className="mt-auto">
                 {!emailSubmitted ? (
-                  <form onSubmit={handleEmailSubmit} className="space-y-3">
-                    <div className="flex gap-2">
+                  <form onSubmit={handleEmailSubmit} className="space-y-2 sm:space-y-3">
+                    <div className="flex flex-col sm:flex-row gap-2">
                       <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="이메일을 입력하세요"
-                        className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:border-white/40"
+                        className="flex-1 bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-sm sm:text-base text-white placeholder-white/50 focus:outline-none focus:border-white/40"
                         required
                       />
                       <button
                         type="submit"
-                        className="bg-yellow-400 text-brand-primary px-4 py-2 rounded-lg font-bold hover:bg-yellow-300 transition-colors whitespace-nowrap"
+                        className="bg-yellow-400 text-brand-primary px-4 py-2 rounded-lg font-bold text-sm sm:text-base hover:bg-yellow-300 transition-colors whitespace-nowrap"
                       >
                         리포트 받기
                       </button>
                     </div>
-                    <p className="text-white/50 text-xs text-center">
+                    <p className="text-white/50 text-[10px] sm:text-xs text-center">
                       상세 분석 리포트를 이메일로 받아보세요
                     </p>
                   </form>
