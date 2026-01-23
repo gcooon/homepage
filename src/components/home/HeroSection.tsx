@@ -36,25 +36,24 @@ export default function HeroSection() {
               style={{ touchAction: 'manipulation' }}
             >
               <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white">
-                B2B IT 디바이스 통합 솔루션
+                B2B IT 디바이스 종합 서비스
               </span>
             </motion.div>
 
-            <div className="space-y-4">
-              <p className="text-2xl md:text-3xl font-bold text-[#FCD34D]">
+            <div className="space-y-1">
+              <p className="text-xl md:text-2xl lg:text-3xl font-bold text-[#FCD34D]">
                 매각·구매·렌탈·유지보수·자산실사
               </p>
-              <h1 className="font-bold leading-tight text-white">
-                <span className="text-2xl md:text-3xl lg:text-4xl">IT 디바이스의 모든 서비스</span><br />
-                <span className="text-3xl md:text-4xl lg:text-5xl"><strong className="text-[#FCD34D]">원툴플랜</strong>이 제공합니다</span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                모든 서비스를 제공합니다
               </h1>
             </div>
 
             <div className="space-y-3 text-white">
-              <p className="text-xl md:text-2xl font-semibold">
-                운영·교체·매각 전체 흐름을 <span className="font-bold text-2xl md:text-3xl text-[#FCD34D]">무료</span>로 관리해드려요
+              <p className="text-lg md:text-xl font-semibold">
+                운영·교체·매각 전체 흐름을 <span className="font-bold text-xl md:text-2xl text-[#FCD34D]">무료</span>로 관리해드려요
               </p>
-              <div className="text-xl md:text-2xl font-bold space-y-1">
+              <div className="text-lg md:text-xl font-bold space-y-1">
                 <p>✓ 리퍼비시로 <span className="text-[#FCD34D]">30% 비용 절감</span></p>
                 <p>✓ 매각 시 <span className="text-[#FCD34D]">15% 추가 수익</span></p>
               </div>

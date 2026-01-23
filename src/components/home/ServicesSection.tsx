@@ -192,9 +192,9 @@ function ServiceCard({ service, index, expandedIds, toggleExpanded }: {
 }
 
 export default function ServicesSection() {
-  // Initialize with all service IDs expanded by default
+  // Initialize with all service IDs collapsed by default
   const [expandedIds, setExpandedIds] = useState<Set<string>>(
-    () => new Set(services.map(s => s.id))
+    () => new Set()
   );
 
   const toggleExpanded = (id: string) => {
