@@ -26,12 +26,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            style={{ touchAction: 'manipulation' }}
           >
             <motion.div
               className="inline-block"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
+              style={{ touchAction: 'manipulation' }}
             >
               <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium" style={{ color: '#00D9FF' }}>
                 B2B IT 디바이스 통합 솔루션
@@ -82,6 +84,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
+              style={{ touchAction: 'manipulation' }}
             >
               <div className="text-center">
                 <AnimatedCounter
@@ -115,6 +118,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
+            style={{ touchAction: 'manipulation' }}
           >
             {/* Dashboard Mockup */}
             <div className="relative">
@@ -216,6 +220,7 @@ export default function HeroSection() {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
+        style={{ touchAction: 'manipulation' }}
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

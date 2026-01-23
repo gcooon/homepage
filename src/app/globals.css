@@ -20,21 +20,19 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   overscroll-behavior-y: none;
   overscroll-behavior-x: auto;
-  touch-action: pan-x pan-y;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
   overscroll-behavior-y: none;
   overscroll-behavior-x: auto;
   position: relative;
-  touch-action: pan-x pan-y;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -217,13 +215,15 @@ img:not([loading]) {
   @apply opacity-100;
 }
 
-/* Ensure touch scrolling works on mobile */
+/* Ensure touch scrolling works on mobile (Android Chrome fix) */
 * {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation !important;
 }
 
-section,
-div,
-main {
-  touch-action: pan-x pan-y;
+/* Override framer-motion touch blocking */
+[style*="transform"],
+[style*="opacity"] {
+  touch-action: manipulation !important;
+  pointer-events: auto !important;
 }
