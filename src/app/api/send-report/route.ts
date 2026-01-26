@@ -263,7 +263,7 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'One Tool Plan <onboarding@resend.dev>',
+        from: 'One Tool Plan <noreply@jinsimused.com>',
         to: email,
         subject: `[One Tool Plan] 비용 절감 분석 리포트 - 연간 ${formatCurrency(savings.totalAnnual)} 절감 가능`,
         html: generateEmailHtml(body),
