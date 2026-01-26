@@ -256,6 +256,9 @@ export async function POST(request: NextRequest) {
       });
     }
 
+    console.log('Sending email to:', email);
+    console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
+
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -271,6 +274,7 @@ export async function POST(request: NextRequest) {
     });
 
     const data = await response.json();
+    console.log('Resend API response:', response.status, data);
 
     if (!response.ok) {
       console.error('Resend error:', data);

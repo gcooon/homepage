@@ -16,7 +16,10 @@
       "Bash(taskkill:*)",
       "Bash(Remove-Item -Force -Recurse \"D:\\\\claude_code\\\\homepage\\\\.next\\\\dev\\\\lock\")",
       "Bash(powershell -Command \"Stop-Process -Id 9772 -Force -ErrorAction SilentlyContinue; Remove-Item -Force -Recurse ''D:\\\\claude_code\\\\homepage\\\\.next'' -ErrorAction SilentlyContinue; Write-Host ''done''\")",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
     ]
   }
 }
