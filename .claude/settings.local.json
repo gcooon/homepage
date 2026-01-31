@@ -19,7 +19,9 @@
       "Bash(npm uninstall:*)",
       "Bash(curl:*)",
       "Bash(netstat:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)"
     ]
   }
 }

@@ -9,10 +9,23 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%)'
-      }}
     >
+      {/* Background Image - IT devices */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/images/hero-bg.png')`
+        }}
+      />
+
+      {/* Purple Gradient Overlay - more transparent to show IT equipment */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.7) 0%, rgba(168, 85, 247, 0.75) 100%)'
+        }}
+      />
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
@@ -184,16 +197,27 @@ export default function HeroSection() {
                   <div className="space-y-2">
                     <div className="text-white/70 text-xs">서비스 브랜드</div>
                     <div className="flex justify-between items-center bg-white/10 rounded-lg px-4 py-3">
-                      {['Samsung', 'LG', 'HP', 'Dell', 'Apple'].map((brand, i) => (
-                        <motion.span
+                      {[
+                        { name: 'LG gram', logo: '/images/brands/gram.jpg', height: 20 },
+                        { name: 'Samsung', logo: '/images/brands/samsung.jpg', height: 18 },
+                        { name: 'Apple', logo: '/images/brands/apple.jpg', height: 20 },
+                        { name: 'HP', logo: '/images/brands/hp.jpg', height: 20 },
+                        { name: 'Dell', logo: '/images/brands/Dell.jpg', height: 18 },
+                      ].map((brand, i) => (
+                        <motion.img
                           key={i}
-                          className="text-white/80 text-xs font-medium"
+                          src={brand.logo}
+                          alt={brand.name}
+                          className="hover:opacity-80 transition-opacity object-contain"
+                          style={{
+                            height: brand.height,
+                            mixBlendMode: 'multiply'
+                          }}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
+                          whileHover={{ opacity: 0.8 }}
                           transition={{ delay: 1.2 + i * 0.1 }}
-                        >
-                          {brand}
-                        </motion.span>
+                        />
                       ))}
                     </div>
                   </div>
