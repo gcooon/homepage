@@ -117,7 +117,7 @@ export default function ProblemSolutionSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
                     </svg>
                   </div>
-                  <h4 className="text-2xl font-bold mb-2 text-slate-700">IT자산의 <span className="text-red-600">예산 최적화 불가능</span></h4>
+                  <h4 className="text-2xl font-bold mb-2 text-slate-700"><span className="text-red-600">IT자산관리의 어려움</span></h4>
                   <p className="text-slate-600 font-medium">
                     담당자의 업무 과부하와 비용낭비
                   </p>
@@ -179,7 +179,7 @@ export default function ProblemSolutionSection() {
               </div>
 
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center justify-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -198,7 +198,7 @@ export default function ProblemSolutionSection() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                       </svg>
                     </div>
-                    <h4 className="text-2xl font-bold mb-2">Lifecycle 통합 관리</h4>
+                    <h4 className="text-2xl font-bold mb-2">IT자산 라이프사이클 통합 관리</h4>
                     <p className="text-white/80">
                       구매부터 매각까지, 하나의 플랫폼에서 해결
                     </p>
@@ -213,7 +213,7 @@ export default function ProblemSolutionSection() {
                       </svg>
                     </div>
                     <p className="text-white font-semibold text-lg">
-                      <span className="text-yellow-300">자동 견적</span> & <span className="text-yellow-300">매각 제안</span>
+                      <span className="text-yellow-300">IT자산 자동 견적</span> & <span className="text-yellow-300">매각 제안</span>
                     </p>
                   </div>
                   <div className="flex items-center gap-3">

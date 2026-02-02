@@ -18,11 +18,11 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Purple Gradient Overlay - more transparent to show IT equipment */}
+      {/* Dark Gray Gradient Overlay - professional IT look */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.7) 0%, rgba(168, 85, 247, 0.75) 100%)'
+          background: 'linear-gradient(135deg, rgba(31, 41, 55, 0.85) 0%, rgba(55, 65, 81, 0.9) 100%)'
         }}
       />
 
@@ -58,26 +58,25 @@ export default function HeroSection() {
                 매각·구매·렌탈·유지보수·자산실사
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
-                모든 서비스를 제공합니다
+                IT자산의 모든 서비스
               </h1>
             </div>
 
             <div className="space-y-3 text-white">
-              <p className="text-lg md:text-xl font-semibold">
-                운영·교체·매각 전체 흐름을 <span className="font-bold text-xl md:text-2xl text-[#FCD34D]">무료</span>로 관리해드려요
-              </p>
               <div className="text-lg md:text-xl font-bold space-y-1">
+                <p>✓ 노트북·모니터·데스크탑·태블릿 <span className="text-[#FCD34D]">모든 IT 디바이스</span></p>
                 <p>✓ 리퍼비시로 <span className="text-[#FCD34D]">30% 비용 절감</span></p>
-                <p>✓ 매각 시 <span className="text-[#FCD34D]">15% 추가 수익</span></p>
+                <p>✓ 신제품도 <span className="text-[#FCD34D]">최적가 비교견적</span></p>
+                <p>✓ 자산교체·매각·운영 <span className="text-[#FCD34D]">완전 무료 관리</span></p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 href="/contact"
-                variant="primary"
+                variant="secondary"
                 size="lg"
-                className="font-bold shadow-xl hover:opacity-90 bg-white text-[#8B5CF6]"
+                className="font-bold shadow-xl border-white text-white hover:bg-white hover:text-gray-800"
               >
                 무료견적문의
               </Button>
@@ -85,7 +84,7 @@ export default function HeroSection() {
                 href="#calculator"
                 variant="secondary"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-[#8B5CF6]"
+                className="border-white text-white hover:bg-white hover:text-gray-800"
               >
                 비용 절감액 확인하기
               </Button>
@@ -137,10 +136,8 @@ export default function HeroSection() {
               <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/30">
                 {/* Dashboard Header */}
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-4 text-white/70 text-sm">One Tool Plan Dashboard</span>
+                  <div className="w-3 h-3 rounded-full bg-purple-500" />
+                  <span className="ml-2 text-white text-base font-medium">노트북·모니터·데스크탑·태블릿 모든 IT 디바이스</span>
                 </div>
 
                 {/* Service Cards */}
@@ -152,8 +149,8 @@ export default function HeroSection() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                       </div>
-                      <div className="text-white font-bold">구매</div>
-                      <div className="text-[#FCD34D] text-xs mt-1">30-50% 절감</div>
+                      <div className="text-white font-bold text-base">구매</div>
+                      <div className="text-[#FCD34D] text-sm font-semibold mt-1">30-50% 절감</div>
                     </div>
                     <div className="bg-white/15 rounded-lg p-4 text-center backdrop-blur-sm border border-white/20 hover:bg-white/25 transition-all duration-300">
                       <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-xl flex items-center justify-center">
@@ -161,8 +158,8 @@ export default function HeroSection() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <div className="text-white font-bold">매각</div>
-                      <div className="text-[#FCD34D] text-xs mt-1">15-20% 높은 가격</div>
+                      <div className="text-white font-bold text-base">매각</div>
+                      <div className="text-[#FCD34D] text-sm font-semibold mt-1">15-20% 높은 가격</div>
                     </div>
                     <div className="bg-white/15 rounded-lg p-4 text-center backdrop-blur-sm border border-white/20 hover:bg-white/25 transition-all duration-300">
                       <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-green-400 to-teal-400 rounded-xl flex items-center justify-center">
@@ -170,14 +167,14 @@ export default function HeroSection() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                         </svg>
                       </div>
-                      <div className="text-white font-bold">렌탈</div>
-                      <div className="text-[#FCD34D] text-xs mt-1">초기비용 0원</div>
+                      <div className="text-white font-bold text-base">렌탈</div>
+                      <div className="text-[#FCD34D] text-sm font-semibold mt-1">초기비용 0원</div>
                     </div>
                   </div>
 
                   {/* Device Stack */}
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-white/70 text-xs mb-3">처리 가능 디바이스</div>
+                    <div className="text-white text-sm font-medium mb-3">처리 가능 디바이스</div>
                     <div className="flex flex-wrap gap-2">
                       {['노트북', 'PC', '모니터', '프린터', '서버', '태블릿'].map((device, i) => (
                         <motion.span
@@ -195,29 +192,25 @@ export default function HeroSection() {
 
                   {/* Brand Partners */}
                   <div className="space-y-2">
-                    <div className="text-white/70 text-xs">서비스 브랜드</div>
+                    <div className="text-white text-sm font-medium">서비스 브랜드</div>
                     <div className="flex justify-between items-center bg-white/10 rounded-lg px-4 py-3">
                       {[
-                        { name: 'LG gram', logo: '/images/brands/gram.jpg', height: 20 },
-                        { name: 'Samsung', logo: '/images/brands/samsung.jpg', height: 18 },
-                        { name: 'Apple', logo: '/images/brands/apple.jpg', height: 20 },
-                        { name: 'HP', logo: '/images/brands/hp.jpg', height: 20 },
-                        { name: 'Dell', logo: '/images/brands/Dell.jpg', height: 18 },
+                        { name: 'LG', className: 'font-bold text-lg' },
+                        { name: 'SAMSUNG', className: 'font-bold text-sm tracking-[0.2em]' },
+                        { name: 'Apple', className: 'font-bold text-base' },
+                        { name: 'HP', className: 'font-bold text-lg italic' },
+                        { name: 'DELL', className: 'font-bold text-base italic tracking-wide' },
                       ].map((brand, i) => (
-                        <motion.img
+                        <motion.span
                           key={i}
-                          src={brand.logo}
-                          alt={brand.name}
-                          className="hover:opacity-80 transition-opacity object-contain"
-                          style={{
-                            height: brand.height,
-                            mixBlendMode: 'multiply'
-                          }}
+                          className={`text-white hover:opacity-80 transition-opacity cursor-default ${brand.className}`}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           whileHover={{ opacity: 0.8 }}
                           transition={{ delay: 1.2 + i * 0.1 }}
-                        />
+                        >
+                          {brand.name}
+                        </motion.span>
                       ))}
                     </div>
                   </div>
@@ -226,7 +219,7 @@ export default function HeroSection() {
 
               {/* Floating Elements */}
               <motion.div
-                className="absolute -top-4 -right-4 bg-[#FCD34D] text-[#8B5CF6] px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                className="absolute -top-4 -right-4 bg-[#FCD34D] text-gray-800 px-4 py-2 rounded-full text-sm font-bold shadow-lg"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.5, type: 'spring' }}

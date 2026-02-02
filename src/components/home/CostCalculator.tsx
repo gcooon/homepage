@@ -236,10 +236,10 @@ export default function CostCalculator() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
           {/* 입력 섹션 */}
           <motion.div
-            className="bg-gray-800 rounded-2xl p-4 lg:p-5"
+            className="bg-gray-800 rounded-2xl p-4 lg:p-5 flex flex-col"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -318,7 +318,7 @@ export default function CostCalculator() {
                 <span className="w-5 h-5 bg-brand-primary rounded-full flex items-center justify-center text-[10px]">3</span>
                 운영 정보
               </h3>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 <CompactInput
                   label="IT 담당 인원"
                   value={itStaffCount}
@@ -337,6 +337,16 @@ export default function CostCalculator() {
                   step={5}
                   suffix="시간"
                 />
+              </div>
+            </div>
+
+            {/* 리스크 요소 */}
+            <div className="mb-4">
+              <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                <span className="w-5 h-5 bg-brand-primary rounded-full flex items-center justify-center text-[10px]">4</span>
+                리스크 요소
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
                 <CompactInput
                   label="유지보수 월비용"
                   value={maintenanceCost}
@@ -345,16 +355,6 @@ export default function CostCalculator() {
                   max={2000000}
                   step={100000}
                 />
-              </div>
-            </div>
-
-            {/* 리스크 요소 */}
-            <div>
-              <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
-                <span className="w-5 h-5 bg-brand-primary rounded-full flex items-center justify-center text-[10px]">4</span>
-                리스크 요소
-              </h3>
-              <div className="grid grid-cols-2 gap-3">
                 <CompactInput
                   label="연간 분실/도난 건수"
                   value={annualLoss}
@@ -364,24 +364,27 @@ export default function CostCalculator() {
                   step={1}
                   suffix="건"
                 />
-                <button
-                  onClick={() => setShowMethodModal(true)}
-                  className="bg-gray-700/50 rounded-lg p-2.5 text-sm text-brand-light hover:text-white transition-colors flex items-center justify-center gap-2"
-                >
-                  <InfoIcon />
-                  계산 방식 보기
-                </button>
               </div>
             </div>
+
+            {/* 계산 방식 보기 */}
+            <button
+              onClick={() => setShowMethodModal(true)}
+              className="w-full text-sm text-brand-light hover:text-white transition-colors flex items-center justify-center gap-1 mt-auto pt-4"
+            >
+              <InfoIcon />
+              계산 방식 보기
+            </button>
           </motion.div>
 
           {/* 결과 섹션 */}
           <motion.div
+            className="h-full"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-4 lg:p-5 text-white">
+            <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-4 lg:p-5 text-white h-full flex flex-col">
               {/* 총 절감액 + 추가 지표 */}
               <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/20">
                 <div>
@@ -451,7 +454,7 @@ export default function CostCalculator() {
               </div>
 
               {/* 이메일 폼 + CTA */}
-              <div className="space-y-3">
+              <div className="space-y-3 mt-auto">
                 {!emailSubmitted ? (
                   <div className="space-y-2">
                     <form onSubmit={handleEmailSubmit} className="flex gap-2">
