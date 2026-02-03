@@ -32,7 +32,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Header */}
-        <div className="flex lg:hidden flex-col items-center py-3 gap-4">
+        <div className="flex lg:hidden flex-col items-start py-3 gap-4">
           {/* Logo - Same as desktop */}
           <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">

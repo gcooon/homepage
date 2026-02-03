@@ -84,7 +84,7 @@ export default function Navigation({ isMobile = false }: NavigationProps) {
     <nav className={cn(
       "flex",
       isMobile
-        ? "flex-wrap justify-center gap-x-4 gap-y-2"
+        ? "flex-wrap justify-start gap-x-4 gap-y-2"
         : "items-center space-x-8"
     )}>
       {NAV_ITEMS.map((item) => (
