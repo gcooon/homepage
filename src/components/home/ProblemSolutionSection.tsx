@@ -126,13 +126,9 @@ export default function ProblemSolutionSection() {
 
               <div className="space-y-4">
                 {problems.map((problem, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 hover:shadow-md transition-all duration-300 flex items-center gap-4"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
                   >
                     <div className={`w-12 h-12 flex-shrink-0 bg-gradient-to-br ${problem.color} rounded-xl flex items-center justify-center text-white shadow-md`}>
                       {problem.icon}
@@ -143,7 +139,7 @@ export default function ProblemSolutionSection() {
                       </h4>
                       <p className="text-gray-600 text-base font-medium">{problem.description}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 

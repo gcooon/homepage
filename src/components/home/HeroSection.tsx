@@ -174,12 +174,12 @@ export default function HeroSection() {
 
                   {/* Device Stack */}
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-white text-sm font-medium mb-3">처리 가능 디바이스</div>
+                    <div className="text-white text-base font-medium mb-3">처리 가능 디바이스</div>
                     <div className="flex flex-wrap gap-2">
                       {['노트북', 'PC', '모니터', '프린터', '서버', '태블릿'].map((device, i) => (
                         <motion.span
                           key={i}
-                          className="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full"
+                          className="bg-white/15 text-white text-sm px-3 py-1.5 rounded-full"
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.8 + i * 0.1 }}
@@ -196,7 +196,7 @@ export default function HeroSection() {
                     <div className="flex justify-between items-center bg-white/10 rounded-lg px-4 py-3">
                       {[
                         { name: 'LG', className: 'font-bold text-lg' },
-                        { name: 'SAMSUNG', className: 'font-bold text-sm tracking-[0.2em]' },
+                        { name: 'SAMSUNG', className: 'font-bold text-sm tracking-[0.05em]' },
                         { name: 'Apple', className: 'font-bold text-base' },
                         { name: 'HP', className: 'font-bold text-lg italic' },
                         { name: 'DELL', className: 'font-bold text-base italic tracking-wide' },
