@@ -187,7 +187,7 @@ export default function ProblemSolutionSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">Solution</h3>
-                    <p className="text-white/70 text-sm">One Tool Plan</p>
+                    <p className="text-white/70 text-sm">One Tool IT</p>
                   </div>
                 </div>
 

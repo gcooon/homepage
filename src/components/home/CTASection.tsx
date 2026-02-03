@@ -36,7 +36,7 @@ export default function CTASection() {
 
           <h2 className="text-4xl md:text-5xl font-bold">
             엑셀 관리는 이제 그만,<br />
-            <span className="text-yellow-300">One Tool Plan</span>으로 전환하세요
+            <span className="text-yellow-300">One Tool IT</span>으로 전환하세요
           </h2>
 
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">

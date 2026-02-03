@@ -32,20 +32,20 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Header */}
-        <div className="flex lg:hidden flex-col items-start py-3 gap-4">
-          {/* Logo - Same as desktop */}
-          <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">O</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xs text-gray-500 leading-tight">IT 디바이스 통합 서비스</span>
-              <span className="font-bold text-gray-900 text-lg leading-tight">One Tool Plan</span>
-            </div>
-          </Link>
+        <div className="flex lg:hidden justify-center py-3">
+          <div className="flex flex-col items-start gap-4">
+            {/* Logo - Same as desktop */}
+            <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">O</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs text-gray-500 leading-tight">IT 디바이스 통합 서비스</span>
+                <span className="font-bold text-gray-900 text-lg leading-tight">ONE TOOL IT</span>
+              </div>
+            </Link>
 
-          {/* Mobile Navigation - Below logo */}
-          <div className="w-full">
+            {/* Mobile Navigation - Below logo */}
             <Navigation isMobile />
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-xs text-gray-500 leading-tight">IT 디바이스 통합 서비스</span>
-              <span className="font-bold text-gray-900 text-lg leading-tight">One Tool Plan</span>
+              <span className="font-bold text-gray-900 text-lg leading-tight">ONE TOOL IT</span>
             </div>
           </Link>
 

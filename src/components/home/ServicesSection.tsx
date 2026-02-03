@@ -227,7 +227,7 @@ export default function ServicesSection() {
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             매각부터 구매, 렌탈, 유지보수, 자산실사까지
             <br className="hidden md:block" />
-            One Tool Plan 하나로 모든 것을 해결하세요.
+            One Tool IT 하나로 모든 것을 해결하세요.
           </p>
         </motion.div>
 

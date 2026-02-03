@@ -1,8 +1,8 @@
 export const BRAND = {
-  name: "One Tool Plan",
-  nameKr: "원툴플랜",
+  name: "One Tool IT",
+  nameKr: "원툴IT",
   slogan: "B2B IT 자산관리 전문 솔루션",
-  company: "One Tool Plan",
+  company: "One Tool IT",
   color: "#8039df",
 } as const;
 

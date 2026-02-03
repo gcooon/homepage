@@ -53,7 +53,7 @@ function generateEmailHtml(data: ReportRequest): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One Tool Plan 비용 절감 분석 리포트</title>
+  <title>One Tool IT 비용 절감 분석 리포트</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f5;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f5f5; padding: 40px 20px;">
@@ -63,7 +63,7 @@ function generateEmailHtml(data: ReportRequest): string {
           <!-- Header -->
           <tr>
             <td style="background: linear-gradient(135deg, #0052CC 0%, #00875A 100%); padding: 40px 30px; text-align: center;">
-              <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: bold;">One Tool Plan</h1>
+              <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: bold;">One Tool IT</h1>
               <p style="color: rgba(255, 255, 255, 0.9); margin: 10px 0 0 0; font-size: 16px;">비용 절감 분석 리포트</p>
             </td>
           </tr>
@@ -219,7 +219,7 @@ function generateEmailHtml(data: ReportRequest): string {
                 실제 결과는 기업 환경에 따라 달라질 수 있습니다.
               </p>
               <p style="color: #999; margin: 15px 0 0 0; font-size: 12px;">
-                &copy; 2024 One Tool Plan. All rights reserved.
+                &copy; 2024 One Tool IT. All rights reserved.
               </p>
             </td>
           </tr>
@@ -266,9 +266,9 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'One Tool Plan <noreply@jinsimused.com>',
+        from: 'One Tool IT <noreply@jinsimused.com>',
         to: email,
-        subject: `[One Tool Plan] 비용 절감 분석 리포트 - 연간 ${formatCurrency(savings.totalAnnual)} 절감 가능`,
+        subject: `[One Tool IT] 비용 절감 분석 리포트 - 연간 ${formatCurrency(savings.totalAnnual)} 절감 가능`,
         html: generateEmailHtml(body),
       }),
     });

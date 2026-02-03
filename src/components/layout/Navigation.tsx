@@ -84,7 +84,7 @@ export default function Navigation({ isMobile = false }: NavigationProps) {
     <nav className={cn(
       "flex",
       isMobile
-        ? "flex-wrap justify-start gap-x-4 gap-y-2"
+        ? "flex-wrap gap-x-4 gap-y-2"
         : "items-center space-x-8"
     )}>
       {NAV_ITEMS.map((item) => (
@@ -93,11 +93,13 @@ export default function Navigation({ isMobile = false }: NavigationProps) {
           href={item.href}
           onClick={(e) => handleClick(e, item.href)}
           className={cn(
-            "transition-colors hover:text-brand-primary relative whitespace-nowrap",
+            "transition-colors relative whitespace-nowrap",
             isMobile ? "text-sm font-semibold" : "text-base font-bold",
-            isActive(item.href)
-              ? "text-brand-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand-primary"
-              : "text-gray-800"
+            item.href === '/contact'
+              ? "text-red-500 hover:text-red-600"
+              : isActive(item.href)
+                ? "text-brand-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand-primary hover:text-brand-primary"
+                : "text-gray-800 hover:text-brand-primary"
           )}
         >
           {item.label}
