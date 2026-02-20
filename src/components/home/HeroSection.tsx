@@ -61,10 +61,10 @@ export default function HeroSection() {
 
             <div className="space-y-3 py-2">
               {[
-                { highlight: '자산 현황', text: '실시간 파악 + 거래 타이밍 알림' },
+                { highlight: '자산 현황', text: '실시간 파악 + 대시보드 통합 관리' },
                 { highlight: '입퇴사 자산', text: '회수 → 매각/재배치 원클릭 연결' },
-                { highlight: '교체 적기', text: '알림 → 리퍼비시 30% 절감 견적' },
-                { highlight: '관리 솔루션', text: '무료 제공, 거래까지 원스톱' },
+                { highlight: '전문 솔루션', text: '무료 제공, 엑셀 탈출 원스톱' },
+                { highlight: '구매·매각', text: '리퍼비시 30% 절감 견적까지' },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -255,19 +255,32 @@ export default function HeroSection() {
                     </motion.div>
                   </div>
 
-                  {/* Alert Cards */}
+                  {/* Solution Features */}
                   <motion.div
                     className="space-y-2"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1 }}
                   >
-                    <div className="text-xs font-semibold text-gray-700 mb-2">스마트 알림</div>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-xs font-semibold text-gray-700">전문 솔루션 주요 기능</div>
+                      <a
+                        href="https://github.com/gcooon/onetool"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] text-violet-600 hover:text-violet-700 font-medium flex items-center gap-1"
+                      >
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                          <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                        </svg>
+                        개발 현황
+                      </a>
+                    </div>
                     {[
-                      { icon: '💰', text: '노트북 3대 매각 적기 도래', tag: '수익 예상 120만원', tagColor: 'bg-emerald-100 text-emerald-700' },
-                      { icon: '🔄', text: '모니터 5대 교체 추천', tag: '리퍼 30% 절감', tagColor: 'bg-blue-100 text-blue-700' },
-                      { icon: '📦', text: '퇴사자 장비 3대 회수 완료', tag: '재배치 대기', tagColor: 'bg-amber-100 text-amber-700' },
-                    ].map((alert, i) => (
+                      { icon: '📊', text: '실시간 자산 대시보드', tag: '통합 관리', tagColor: 'bg-violet-100 text-violet-700' },
+                      { icon: '📋', text: '자동 보고서 & 엑셀 내보내기', tag: '업무 효율', tagColor: 'bg-blue-100 text-blue-700' },
+                      { icon: '🔗', text: '구매·매각·렌탈 원클릭 연동', tag: '올케어', tagColor: 'bg-emerald-100 text-emerald-700' },
+                    ].map((feature, i) => (
                       <motion.div
                         key={i}
                         className="flex items-center gap-3 bg-white rounded-lg p-2.5 border border-gray-100 shadow-sm"
@@ -275,9 +288,9 @@ export default function HeroSection() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1.1 + i * 0.1 }}
                       >
-                        <span className="text-base">{alert.icon}</span>
-                        <span className="text-xs text-gray-700 flex-1">{alert.text}</span>
-                        <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${alert.tagColor}`}>{alert.tag}</span>
+                        <span className="text-base">{feature.icon}</span>
+                        <span className="text-xs text-gray-700 flex-1">{feature.text}</span>
+                        <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${feature.tagColor}`}>{feature.tag}</span>
                       </motion.div>
                     ))}
                   </motion.div>
