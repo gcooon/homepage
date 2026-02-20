@@ -28,15 +28,15 @@ export const services: Service[] = [
     description: '관리만 하는 게 아닙니다. 최적의 구매·매각·렌탈 타이밍까지 자동으로 알려드립니다.',
     icon: 'dashboard',
     background: 'from-brand-primary to-brand-secondary',
-    marketContext: '자산 현황 파악은 기본, 언제 교체하고 언제 매각해야 하는지까지 알려주는 스마트 솔루션입니다.',
+    marketContext: '엑셀 관리에서 벗어나 전문 솔루션으로 자산을 통합 관리하세요. 구매·매각·렌탈까지 원스톱으로 연결됩니다.',
     features: [
       {
-        title: '실시간 자산 현황 + 거래 추천',
-        description: '누가, 어디서, 무엇을 쓰는지 파악하고, "이 자산 3대 지금 매각하면 120만원" 같은 거래 타이밍 알림'
+        title: '실시간 대시보드 통합 관리',
+        description: '누가, 어디서, 무엇을 쓰는지 한눈에 파악. 자산 현황을 실시간으로 모니터링'
       },
       {
-        title: '교체 적기 자동 알림',
-        description: '"이 모니터 5대 교체 적기입니다. 리퍼비시로 30% 절감 가능" - 원클릭으로 견적 요청'
+        title: '자동 보고서 & 엑셀 내보내기',
+        description: '자산 현황 보고서 자동 생성, 필요시 엑셀로 내보내기 가능'
       },
       {
         title: '입퇴사 자산 → 매각/재배치 연계',
@@ -50,7 +50,7 @@ export const services: Service[] = [
     stats: [
       { value: '무료', label: '이용 요금' },
       { value: '원클릭', label: '거래 연결' },
-      { value: '자동', label: '타이밍 알림' }
+      { value: '통합', label: '대시보드' }
     ],
     isFree: true,
     isHighlighted: true

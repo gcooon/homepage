@@ -14,8 +14,8 @@ const aiFeatures = [
     icon: '📊',
   },
   {
-    title: '최적 시점 제안',
-    description: '매각/교체 타이밍을 AI가 자동으로 추천',
+    title: '거래 타이밍 분석',
+    description: '시장 데이터 기반 최적의 매각 시점을 AI가 분석',
     icon: '⏰',
   },
   {
