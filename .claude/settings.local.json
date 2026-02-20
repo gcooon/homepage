@@ -21,7 +21,15 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "WebSearch",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(cd:*)",
+      "Bash(tree:*)",
+      "Bash(npx next dev:*)",
+      "Bash(netsh interface ipv4 show excludedportrange:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(rd /s /q \"D:\\\\claude_code\\\\homepage2\\\\.next\")",
+      "Bash(Remove-Item -Force -Recurse \".next/dev\" -ErrorAction SilentlyContinue)",
+      "Bash(Remove-Item -Force \".next/dev/lock\" -ErrorAction SilentlyContinue)"
     ]
   }
 }

@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
+import LifecycleFlowSection from "@/components/home/LifecycleFlowSection";
 import ProblemSolutionSection from "@/components/home/ProblemSolutionSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import CostCalculator from "@/components/home/CostCalculator";
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <LifecycleFlowSection />
       <ProblemSolutionSection />
       <ServicesSection />
       <CostCalculator />

@@ -8,6 +8,16 @@ import { services, Service } from '@/lib/data/services';
 // SVG Icon Components
 const ServiceIcon = ({ icon, className = "w-8 h-8" }: { icon: string; className?: string }) => {
   const icons: Record<string, ReactNode> = {
+    dashboard: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    users: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
     currency: (
       <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -40,7 +50,7 @@ const ServiceIcon = ({ icon, className = "w-8 h-8" }: { icon: string; className?
       </svg>
     ),
   };
-  return icons[icon] || icons.currency;
+  return icons[icon] || icons.dashboard;
 };
 
 function ServiceCard({ service, index, expandedIds, toggleExpanded }: {
@@ -61,15 +71,20 @@ function ServiceCard({ service, index, expandedIds, toggleExpanded }: {
         className={`
           bg-white rounded-2xl overflow-hidden shadow-lg border
           transition-all duration-300 cursor-pointer h-full
-          ${service.isFree ? 'border-gray-200 opacity-90' : 'border-gray-100'}
+          ${service.isHighlighted ? 'border-brand-primary border-2 ring-2 ring-brand-primary/20' : service.isFree ? 'border-gray-200 opacity-90' : 'border-gray-100'}
           ${expandedIds.has(service.id) ? 'ring-2 ring-brand-primary' : 'hover:shadow-xl hover:-translate-y-1'}
         `}
         onClick={() => toggleExpanded(service.id)}
       >
         {/* Card Header */}
         <div className={`bg-gradient-to-r ${service.background} p-6 text-white relative`}>
-          {service.isFree && (
-            <span className="absolute top-3 right-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full">
+          {service.isHighlighted && (
+            <span className="absolute top-3 right-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full animate-pulse">
+              RECOMMENDED
+            </span>
+          )}
+          {service.isFree && !service.isHighlighted && (
+            <span className="absolute top-3 right-3 bg-green-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full">
               FREE
             </span>
           )}
@@ -222,10 +237,10 @@ export default function ServicesSection() {
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4 text-gray-900">
-            IT 자산의 전체 라이프사이클을 관리합니다
+            자산관리부터 입퇴사 연계까지, 원스톱으로
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            매각부터 구매, 렌탈, 유지보수, 자산실사까지
+            엑셀 탈출, 유휴 자산 파악, 입퇴사 자산 회수까지
             <br className="hidden md:block" />
             One Tool IT 하나로 모든 것을 해결하세요.
           </p>

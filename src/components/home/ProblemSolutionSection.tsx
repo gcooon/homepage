@@ -35,38 +35,51 @@ const ProblemIcon = ({ type }: { type: string }) => {
 
 const problems = [
   {
-    titlePrefix: '복잡한 ',
-    titleHighlight: '멀티 벤더',
-    titleSuffix: ' 관리',
-    description: '구매·매각·렌탈·유지보수 업체가 모두 다름',
+    titlePrefix: '',
+    titleHighlight: '누가 쓰는지',
+    titleSuffix: ' 모른다',
+    description: 'IT 자산이 누구에게 배정되어 있는지 추적 불가',
     color: 'from-slate-400 to-slate-500',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     )
   },
   {
     titlePrefix: '',
-    titleHighlight: '비효율적',
-    titleSuffix: ' 프로세스',
-    description: '중복 커뮤니케이션과 문서 작업의 반복',
+    titleHighlight: '어디에 있는지',
+    titleSuffix: ' 모른다',
+    description: '자산의 위치와 상태를 실시간으로 파악할 수 없음',
     color: 'from-slate-400 to-slate-500',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     )
   },
   {
     titlePrefix: '',
-    titleHighlight: '비용과 시간',
-    titleSuffix: '의 낭비',
-    description: '최적가를 놓치고 관리 인력 투입 과다',
+    titleHighlight: '유휴·불용 자산',
+    titleSuffix: '을 모른다',
+    description: '사용하지 않는 자산이 창고에 쌓여 비용 낭비',
     color: 'from-slate-400 to-slate-500',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+      </svg>
+    )
+  },
+  {
+    titlePrefix: '',
+    titleHighlight: '입퇴사 때',
+    titleSuffix: ' 자산이 잠긴다',
+    description: '퇴사자 자산 회수 지연, 입사자 장비 배정 지연',
+    color: 'from-slate-400 to-slate-500',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
       </svg>
     )
   },
@@ -92,7 +105,7 @@ export default function ProblemSolutionSection() {
             Problem & Solution
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4 text-gray-900">
-            파편화된 자산관리, 아직도 계속하시겠습니까?
+            담당자님, 자산관리 힘드셨죠?
           </h2>
         </motion.div>
 
@@ -114,12 +127,12 @@ export default function ProblemSolutionSection() {
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-slate-400 to-slate-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <h4 className="text-2xl font-bold mb-2 text-slate-700"><span className="text-red-600">IT자산관리의 어려움</span></h4>
+                  <h4 className="text-2xl font-bold mb-2 text-slate-700"><span className="text-red-600">엑셀 관리의 한계</span></h4>
                   <p className="text-slate-600 font-medium">
-                    담당자의 업무 과부하와 비용낭비
+                    관리 자체가 안 된다가 가장 큰 고통
                   </p>
                 </div>
               </div>
@@ -191,12 +204,12 @@ export default function ProblemSolutionSection() {
                   <div className="text-center">
                     <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-teal-400 rounded-2xl flex items-center justify-center shadow-lg">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                     </div>
-                    <h4 className="text-2xl font-bold mb-2">IT자산 라이프사이클 통합 관리</h4>
+                    <h4 className="text-2xl font-bold mb-2">자산 가시성 확보</h4>
                     <p className="text-white/80">
-                      구매부터 매각까지, 하나의 플랫폼에서 해결
+                      누가, 어디서, 무엇을 쓰는지 한눈에 파악
                     </p>
                   </div>
                 </div>
@@ -205,11 +218,21 @@ export default function ProblemSolutionSection() {
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-5 h-5 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
                     <p className="text-white font-semibold text-lg">
-                      <span className="text-yellow-300">IT자산 자동 견적</span> & <span className="text-yellow-300">매각 제안</span>
+                      <span className="text-yellow-300">사용자 자동 매핑</span> 대시보드
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                    </div>
+                    <p className="text-white font-semibold text-lg">
+                      <span className="text-yellow-300">입퇴사 자동</span> 회수/배정 워크플로우
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -219,7 +242,7 @@ export default function ProblemSolutionSection() {
                       </svg>
                     </div>
                     <p className="text-white font-semibold text-lg">
-                      <span className="text-yellow-300">최저가 구매</span>와 <span className="text-yellow-300">최고가 매각</span> 타이밍 알림
+                      <span className="text-yellow-300">유휴 자산</span> 자동 알림
                     </p>
                   </div>
                 </div>
