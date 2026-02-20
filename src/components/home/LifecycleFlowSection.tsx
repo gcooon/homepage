@@ -5,6 +5,18 @@ import Container from '../common/Container';
 
 const flowSteps = [
   {
+    id: 'manage',
+    title: '자산관리',
+    subtitle: '통합관리 + 입퇴사',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    color: 'from-brand-primary to-brand-secondary',
+    isMain: true,
+  },
+  {
     id: 'buy',
     title: '구매',
     subtitle: '리퍼비시 30% 절감',
@@ -16,27 +28,26 @@ const flowSteps = [
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    id: 'manage',
-    title: '관리/실사',
-    subtitle: '실시간 현황 파악',
+    id: 'sell',
+    title: '매각',
+    subtitle: '최고가 보안 파기',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    color: 'from-brand-primary to-brand-secondary',
-    isMain: true,
+    color: 'from-yellow-500 to-orange-500',
   },
   {
-    id: 'onboarding',
-    title: '입퇴사 연계',
-    subtitle: '자동 회수/배정',
+    id: 'rental',
+    title: '렌탈',
+    subtitle: '초기비용 0원',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
       </svg>
     ),
-    color: 'from-teal-500 to-cyan-500',
+    color: 'from-purple-500 to-indigo-500',
   },
   {
     id: 'maintenance',
@@ -51,15 +62,15 @@ const flowSteps = [
     color: 'from-violet-500 to-purple-500',
   },
   {
-    id: 'sell',
-    title: '매각',
-    subtitle: '최고가 보안 파기',
+    id: 'audit',
+    title: '자산실사',
+    subtitle: '99.9% 정확도',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-teal-500 to-cyan-500',
   },
 ];
 

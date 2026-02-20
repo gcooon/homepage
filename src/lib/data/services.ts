@@ -25,22 +25,22 @@ export const services: Service[] = [
     id: 'saas',
     title: '자산관리 솔루션',
     subtitle: '무료 제공',
-    description: '관리만 하는 게 아닙니다. 최적의 구매·매각·렌탈 타이밍까지 자동으로 알려드립니다.',
+    description: '관리만 하는 게 아닙니다. 입퇴사 자산관리부터 구매·매각·렌탈까지 원스톱으로 연결됩니다.',
     icon: 'dashboard',
     background: 'from-brand-primary to-brand-secondary',
-    marketContext: '엑셀 관리에서 벗어나 전문 솔루션으로 자산을 통합 관리하세요. 구매·매각·렌탈까지 원스톱으로 연결됩니다.',
+    marketContext: '엑셀 관리에서 벗어나 전문 솔루션으로 자산을 통합 관리하세요. 입퇴사 워크플로우까지 자동화됩니다.',
     features: [
       {
         title: '실시간 대시보드 통합 관리',
         description: '누가, 어디서, 무엇을 쓰는지 한눈에 파악. 자산 현황을 실시간으로 모니터링'
       },
       {
-        title: '자동 보고서 & 엑셀 내보내기',
-        description: '자산 현황 보고서 자동 생성, 필요시 엑셀로 내보내기 가능'
+        title: '입퇴사 자산 자동 회수/배정',
+        description: '퇴사 예정일 자동 알림, 입사자 직무별 자산 추천. 회수 후 매각/재배치 원클릭 연결'
       },
       {
-        title: '입퇴사 자산 → 매각/재배치 연계',
-        description: '퇴사자 장비 회수 완료 → "매각 or 재배치" 선택 화면으로 자동 연결'
+        title: '자동 보고서 & 엑셀 내보내기',
+        description: '자산 현황 보고서 자동 생성, 필요시 엑셀로 내보내기 가능'
       },
       {
         title: '엑셀 탈출, 5분 만에 시작',
@@ -50,94 +50,10 @@ export const services: Service[] = [
     stats: [
       { value: '무료', label: '이용 요금' },
       { value: '원클릭', label: '거래 연결' },
-      { value: '통합', label: '대시보드' }
+      { value: '자동', label: '입퇴사 관리' }
     ],
     isFree: true,
     isHighlighted: true
-  },
-  {
-    id: 'audit',
-    title: '자산실사',
-    subtitle: '데이터 가시성',
-    description: 'QR/바코드 기반 전수 조사로 99.9% 정확도를 실현합니다.',
-    icon: 'clipboard',
-    background: 'from-indigo-600 to-purple-700',
-    marketContext: '엑셀 수기 관리의 부정확성으로 분실율 평균 5~10%가 발생하고 있습니다.',
-    features: [
-      {
-        title: '전수 자산 파악, 누락 없음',
-        description: 'QR/바코드 기반으로 위치, 사용자 즉시 확인'
-      },
-      {
-        title: '회계 자산 데이터 연동',
-        description: '회계, 감가상각 자동 연동, 수기기입 제거'
-      },
-      {
-        title: '자산 상태 진단 리포트',
-        description: '실사 리포트로 상세한 자산 상태 진단 리포트 제공'
-      }
-    ],
-    stats: [
-      { value: '99.9%', label: '정확도' },
-      { value: '자동', label: '회계 연동' },
-      { value: '5-10%', label: '분실율 감소' }
-    ]
-  },
-  {
-    id: 'onboarding',
-    title: '입퇴사 자산관리',
-    subtitle: '자동 회수/배정',
-    description: '입퇴사 시 발생하는 자산 관리 문제를 자동화된 워크플로우로 해결합니다.',
-    icon: 'users',
-    background: 'from-teal-500 to-cyan-600',
-    marketContext: '입퇴사가 잦아지면서 자산이 잠기거나 고장 대응이 안 되는 문제가 급증하고 있습니다.',
-    features: [
-      {
-        title: '퇴사자 자산 자동 회수',
-        description: '퇴사 예정일 자동 알림 + 반납 체크리스트. 무단 미반납 시 경고 알림'
-      },
-      {
-        title: '입사자 자산 자동 배정',
-        description: '직무별 적정 자산 자동 추천 + 당일 배송 예약. 입사 첫날부터 업무 가능'
-      },
-      {
-        title: '자산 초기화/복구 서비스',
-        description: '퇴사자 장비 보안 데이터 삭제 후 입사자용으로 즉시 재배치'
-      }
-    ],
-    stats: [
-      { value: '자동', label: '회수/배정' },
-      { value: '당일', label: '배송 가능' },
-      { value: '100%', label: '보안 삭제' }
-    ]
-  },
-  {
-    id: 'maintenance',
-    title: '유지보수',
-    subtitle: '업무 연속성 보장',
-    description: '전담 엔지니어가 자산의 안정적 운영을 책임집니다.',
-    icon: 'wrench',
-    background: 'from-violet-500 to-purple-600',
-    marketContext: 'IT 인력이 부족한 중소/중견기업은 자산 관리자가 없어 고장 대응이 느립니다.',
-    features: [
-      {
-        title: '전담 엔지니어 배정',
-        description: '고장부터 복구까지 기업별 전담 엔지니어 관리'
-      },
-      {
-        title: '정기 점검 서비스',
-        description: '정기 방문으로 사전 고장 예방 및 자산 관리'
-      },
-      {
-        title: '수명 연장 업그레이드',
-        description: '노후 장비 간단한 하드웨어 업그레이드로 수명 2년 연장'
-      }
-    ],
-    stats: [
-      { value: '2년', label: '수명 연장' },
-      { value: '전담', label: '엔지니어 배정' },
-      { value: '정기', label: '예방 점검' }
-    ]
   },
   {
     id: 'buy',
@@ -221,6 +137,62 @@ export const services: Service[] = [
       { value: '0원', label: '초기 투자비' },
       { value: '24h', label: '교체 보장' },
       { value: '1개월~', label: '유연한 계약' }
+    ]
+  },
+  {
+    id: 'maintenance',
+    title: '유지보수',
+    subtitle: '업무 연속성 보장',
+    description: '전담 엔지니어가 자산의 안정적 운영을 책임집니다.',
+    icon: 'wrench',
+    background: 'from-violet-500 to-purple-600',
+    marketContext: 'IT 인력이 부족한 중소/중견기업은 자산 관리자가 없어 고장 대응이 느립니다.',
+    features: [
+      {
+        title: '전담 엔지니어 배정',
+        description: '고장부터 복구까지 기업별 전담 엔지니어 관리'
+      },
+      {
+        title: '정기 점검 서비스',
+        description: '정기 방문으로 사전 고장 예방 및 자산 관리'
+      },
+      {
+        title: '수명 연장 업그레이드',
+        description: '노후 장비 간단한 하드웨어 업그레이드로 수명 2년 연장'
+      }
+    ],
+    stats: [
+      { value: '2년', label: '수명 연장' },
+      { value: '전담', label: '엔지니어 배정' },
+      { value: '정기', label: '예방 점검' }
+    ]
+  },
+  {
+    id: 'audit',
+    title: '자산실사',
+    subtitle: '데이터 가시성',
+    description: 'QR/바코드 기반 전수 조사로 99.9% 정확도를 실현합니다.',
+    icon: 'clipboard',
+    background: 'from-indigo-600 to-purple-700',
+    marketContext: '엑셀 수기 관리의 부정확성으로 분실율 평균 5~10%가 발생하고 있습니다.',
+    features: [
+      {
+        title: '전수 자산 파악, 누락 없음',
+        description: 'QR/바코드 기반으로 위치, 사용자 즉시 확인'
+      },
+      {
+        title: '회계 자산 데이터 연동',
+        description: '회계, 감가상각 자동 연동, 수기기입 제거'
+      },
+      {
+        title: '자산 상태 진단 리포트',
+        description: '실사 리포트로 상세한 자산 상태 진단 리포트 제공'
+      }
+    ],
+    stats: [
+      { value: '99.9%', label: '정확도' },
+      { value: '자동', label: '회계 연동' },
+      { value: '5-10%', label: '분실율 감소' }
     ]
   }
 ];
