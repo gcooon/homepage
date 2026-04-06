@@ -29,7 +29,8 @@
       "WebFetch(domain:localhost)",
       "Bash(rd /s /q \"D:\\\\claude_code\\\\homepage2\\\\.next\")",
       "Bash(Remove-Item -Force -Recurse \".next/dev\" -ErrorAction SilentlyContinue)",
-      "Bash(Remove-Item -Force \".next/dev/lock\" -ErrorAction SilentlyContinue)"
+      "Bash(Remove-Item -Force \".next/dev/lock\" -ErrorAction SilentlyContinue)",
+      "Bash(npx next build:*)"
     ]
   }
 }

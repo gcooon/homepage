@@ -14,7 +14,7 @@ export const CONTACT = {
 
 export const NAV_ITEMS = [
   { label: "홈", href: "/" },
-  { label: "서비스", href: "/#services" },
+  { label: "도구모음", href: "/#services" },
   { label: "비용 계산", href: "/#calculator" },
   { label: "회사 소개", href: "/about" },
   { label: "무료견적문의", href: "/contact" },

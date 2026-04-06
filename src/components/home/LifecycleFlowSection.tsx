@@ -5,18 +5,6 @@ import Container from '../common/Container';
 
 const flowSteps = [
   {
-    id: 'manage',
-    title: '자산관리',
-    subtitle: '통합관리 + 입퇴사',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
-    color: 'from-brand-primary to-brand-secondary',
-    isMain: true,
-  },
-  {
     id: 'buy',
     title: '구매',
     subtitle: '리퍼비시 30% 절감',
@@ -97,9 +85,9 @@ export default function LifecycleFlowSection() {
             관리하면서 최적의 <span className="text-[#FCD34D]">구매·매각 타이밍</span>까지
           </h2>
           <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
-            자산관리 솔루션이 거래 시점을 자동으로 알려드립니다.
+            구매부터 매각까지, 거래 시점을 자동으로 알려드립니다.
             <br className="hidden md:block" />
-            관리부터 거래까지, 하나의 플랫폼에서 원스톱으로.
+            하나의 플랫폼에서 원스톱으로.
           </p>
         </motion.div>
 
@@ -110,7 +98,7 @@ export default function LifecycleFlowSection() {
             {flowSteps.map((step, index) => (
               <div key={step.id} className="flex items-center">
                 <motion.div
-                  className={`relative ${step.isMain ? 'scale-110' : ''}`}
+                  className="relative"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -122,24 +110,12 @@ export default function LifecycleFlowSection() {
                       flex flex-col items-center justify-center text-white
                       shadow-lg hover:shadow-xl transition-all duration-300
                       hover:-translate-y-1 cursor-pointer
-                      ${step.isMain ? 'ring-2 ring-yellow-400 ring-offset-2 ring-offset-gray-900' : ''}
                     `}
                   >
                     <div className="mb-2">{step.icon}</div>
                     <div className="font-bold text-sm">{step.title}</div>
                     <div className="text-xs text-white/80 mt-0.5">{step.subtitle}</div>
                   </div>
-                  {step.isMain && (
-                    <motion.div
-                      className="absolute -top-3 -right-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full"
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5, type: 'spring' }}
-                    >
-                      무료
-                    </motion.div>
-                  )}
                 </motion.div>
 
                 {/* Arrow */}
@@ -184,7 +160,6 @@ export default function LifecycleFlowSection() {
             {flowSteps.map((step, index) => (
               <motion.div
                 key={step.id}
-                className={`${step.isMain ? 'col-span-2' : ''}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -195,19 +170,13 @@ export default function LifecycleFlowSection() {
                     w-full p-4 rounded-xl bg-gradient-to-br ${step.color}
                     flex items-center gap-3 text-white
                     shadow-lg
-                    ${step.isMain ? 'ring-2 ring-yellow-400' : ''}
                   `}
                 >
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {step.icon}
                   </div>
                   <div>
-                    <div className="font-bold text-sm flex items-center gap-2">
-                      {step.title}
-                      {step.isMain && (
-                        <span className="bg-yellow-400 text-gray-900 text-xs px-1.5 py-0.5 rounded">무료</span>
-                      )}
-                    </div>
+                    <div className="font-bold text-sm">{step.title}</div>
                     <div className="text-xs text-white/80">{step.subtitle}</div>
                   </div>
                 </div>
@@ -231,7 +200,7 @@ export default function LifecycleFlowSection() {
               </svg>
             </div>
             <span className="text-white font-medium">
-              관리 솔루션이 <span className="text-[#FCD34D]">"이 자산 지금 매각하면 120만원"</span> 같은 거래 타이밍을 자동 알림
+              <span className="text-[#FCD34D]">"이 자산 지금 매각하면 120만원"</span> 같은 거래 타이밍을 자동 알림
             </span>
           </div>
         </motion.div>

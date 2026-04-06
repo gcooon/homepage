@@ -4,8 +4,8 @@ import Card from '@/components/common/Card';
 import { services } from '@/lib/data/services';
 
 export const metadata: Metadata = {
-  title: '서비스 소개',
-  description: '자산 생애주기 전체를 관리하는 원킷의 8가지 핵심 서비스',
+  title: '도구모음',
+  description: '자산 생애주기 전체를 관리하는 원툴IT의 핵심 도구모음',
 };
 
 export default function ServicesPage() {

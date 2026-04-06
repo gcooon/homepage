@@ -8,7 +8,6 @@ const serviceLinks = [
   { label: '렌탈', href: '/#services' },
   { label: '유지보수', href: '/#services' },
   { label: '자산실사', href: '/#services' },
-  { label: '자산관리 솔루션 (무료)', href: '/#services' },
 ];
 
 export default function Footer() {
@@ -35,7 +34,7 @@ export default function Footer() {
 
           {/* 서비스 */}
           <div>
-            <h4 className="font-semibold mb-4">서비스</h4>
+            <h4 className="font-semibold mb-4">도구모음</h4>
             <ul className="space-y-2">
               {serviceLinks.map((item) => (
                 <li key={item.label}>

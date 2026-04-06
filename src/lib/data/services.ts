@@ -22,40 +22,6 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: 'saas',
-    title: '자산관리 솔루션',
-    subtitle: '무료 제공',
-    description: '관리만 하는 게 아닙니다. 입퇴사 자산관리부터 구매·매각·렌탈까지 원스톱으로 연결됩니다.',
-    icon: 'dashboard',
-    background: 'from-brand-primary to-brand-secondary',
-    marketContext: '엑셀 관리에서 벗어나 전문 솔루션으로 자산을 통합 관리하세요. 입퇴사 워크플로우까지 자동화됩니다.',
-    features: [
-      {
-        title: '실시간 대시보드 통합 관리',
-        description: '누가, 어디서, 무엇을 쓰는지 한눈에 파악. 자산 현황을 실시간으로 모니터링'
-      },
-      {
-        title: '입퇴사 자산 자동 회수/배정',
-        description: '퇴사 예정일 자동 알림, 입사자 직무별 자산 추천. 회수 후 매각/재배치 원클릭 연결'
-      },
-      {
-        title: '자동 보고서 & 엑셀 내보내기',
-        description: '자산 현황 보고서 자동 생성, 필요시 엑셀로 내보내기 가능'
-      },
-      {
-        title: '엑셀 탈출, 5분 만에 시작',
-        description: '엑셀 업로드만으로 DB 자동 구축. 관리부터 거래까지 원스톱 플랫폼'
-      }
-    ],
-    stats: [
-      { value: '무료', label: '이용 요금' },
-      { value: '원클릭', label: '거래 연결' },
-      { value: '자동', label: '입퇴사 관리' }
-    ],
-    isFree: true,
-    isHighlighted: true
-  },
-  {
     id: 'buy',
     title: '구매',
     subtitle: '예산 절감 최적화',
